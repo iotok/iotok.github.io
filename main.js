@@ -156,8 +156,8 @@
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(7);
 	__webpack_require__(6);
+	__webpack_require__(7);
 	__webpack_require__(8);
 	__webpack_require__(5);
 	__webpack_require__(9);
@@ -683,6 +683,71 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/* ========================================================================
+	 * Bootstrap: transition.js v3.3.4
+	 * http://getbootstrap.com/javascript/#transitions
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
+	  // ============================================================
+	
+	  function transitionEnd() {
+	    var el = document.createElement('bootstrap')
+	
+	    var transEndEventNames = {
+	      WebkitTransition : 'webkitTransitionEnd',
+	      MozTransition    : 'transitionend',
+	      OTransition      : 'oTransitionEnd otransitionend',
+	      transition       : 'transitionend'
+	    }
+	
+	    for (var name in transEndEventNames) {
+	      if (el.style[name] !== undefined) {
+	        return { end: transEndEventNames[name] }
+	      }
+	    }
+	
+	    return false // explicit for ie8 (  ._.)
+	  }
+	
+	  // http://blog.alexmaccaw.com/css-transitions
+	  $.fn.emulateTransitionEnd = function (duration) {
+	    var called = false
+	    var $el = this
+	    $(this).one('bsTransitionEnd', function () { called = true })
+	    var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
+	    setTimeout(callback, duration)
+	    return this
+	  }
+	
+	  $(function () {
+	    $.support.transition = transitionEnd()
+	
+	    if (!$.support.transition) return
+	
+	    $.event.special.bsTransitionEnd = {
+	      bindType: $.support.transition.end,
+	      delegateType: $.support.transition.end,
+	      handle: function (e) {
+	        if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
+	      }
+	    }
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* ========================================================================
 	 * Bootstrap: button.js v3.3.4
 	 * http://getbootstrap.com/javascript/#buttons
 	 * ========================================================================
@@ -796,71 +861,6 @@
 	    .on('focus.bs.button.data-api blur.bs.button.data-api', '[data-toggle^="button"]', function (e) {
 	      $(e.target).closest('.btn').toggleClass('focus', /^focus(in)?$/.test(e.type))
 	    })
-	
-	}(jQuery);
-
-
-/***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* ========================================================================
-	 * Bootstrap: transition.js v3.3.4
-	 * http://getbootstrap.com/javascript/#transitions
-	 * ========================================================================
-	 * Copyright 2011-2015 Twitter, Inc.
-	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-	 * ======================================================================== */
-	
-	
-	+function ($) {
-	  'use strict';
-	
-	  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
-	  // ============================================================
-	
-	  function transitionEnd() {
-	    var el = document.createElement('bootstrap')
-	
-	    var transEndEventNames = {
-	      WebkitTransition : 'webkitTransitionEnd',
-	      MozTransition    : 'transitionend',
-	      OTransition      : 'oTransitionEnd otransitionend',
-	      transition       : 'transitionend'
-	    }
-	
-	    for (var name in transEndEventNames) {
-	      if (el.style[name] !== undefined) {
-	        return { end: transEndEventNames[name] }
-	      }
-	    }
-	
-	    return false // explicit for ie8 (  ._.)
-	  }
-	
-	  // http://blog.alexmaccaw.com/css-transitions
-	  $.fn.emulateTransitionEnd = function (duration) {
-	    var called = false
-	    var $el = this
-	    $(this).one('bsTransitionEnd', function () { called = true })
-	    var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
-	    setTimeout(callback, duration)
-	    return this
-	  }
-	
-	  $(function () {
-	    $.support.transition = transitionEnd()
-	
-	    if (!$.support.transition) return
-	
-	    $.event.special.bsTransitionEnd = {
-	      bindType: $.support.transition.end,
-	      delegateType: $.support.transition.end,
-	      handle: function (e) {
-	        if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
-	      }
-	    }
-	  })
 	
 	}(jQuery);
 
@@ -2395,8 +2395,8 @@
 	exports.RouteHandler = exports.ActiveHandler;
 	
 	exports.HashLocation = __webpack_require__(98);
-	exports.HistoryLocation = __webpack_require__(100);
-	exports.RefreshLocation = __webpack_require__(99);
+	exports.HistoryLocation = __webpack_require__(99);
+	exports.RefreshLocation = __webpack_require__(100);
 	exports.StaticLocation = __webpack_require__(101);
 	exports.TestLocation = __webpack_require__(102);
 	
@@ -2486,7 +2486,7 @@
 	
 	"use strict";
 	exports.__addLocaleData = __addLocaleData;
-	var intl$messageformat$$ = __webpack_require__(138), intl$relativeformat$$ = __webpack_require__(139), src$en$$ = __webpack_require__(114), src$mixin$$ = __webpack_require__(115), src$components$date$$ = __webpack_require__(116), src$components$time$$ = __webpack_require__(113), src$components$relative$$ = __webpack_require__(117), src$components$number$$ = __webpack_require__(118), src$components$message$$ = __webpack_require__(119), src$components$html$message$$ = __webpack_require__(120);
+	var intl$messageformat$$ = __webpack_require__(146), intl$relativeformat$$ = __webpack_require__(145), src$en$$ = __webpack_require__(114), src$mixin$$ = __webpack_require__(115), src$components$date$$ = __webpack_require__(116), src$components$time$$ = __webpack_require__(113), src$components$relative$$ = __webpack_require__(117), src$components$number$$ = __webpack_require__(118), src$components$message$$ = __webpack_require__(119), src$components$html$message$$ = __webpack_require__(120);
 	function __addLocaleData(data) {
 	    intl$messageformat$$["default"].__addLocaleData(data);
 	    intl$relativeformat$$["default"].__addLocaleData(data);
@@ -2659,12 +2659,12 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(13);
-	var classSet = __webpack_require__(150);
+	var classSet = __webpack_require__(149);
 	
 	var MenuItem = __webpack_require__(67);
 	var LinkMixin = __webpack_require__(121);
 	
-	var joinClasses = __webpack_require__(153);
+	var joinClasses = __webpack_require__(152);
 	
 	var MenuItemLink = React.createClass({displayName: "MenuItemLink",
 	  mixins: [
@@ -8533,7 +8533,7 @@
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 	
 	var React = __webpack_require__(13);
-	var assign = __webpack_require__(152);
+	var assign = __webpack_require__(153);
 	var PropTypes = __webpack_require__(134);
 	
 	function isLeftClickEvent(event) {
@@ -8825,7 +8825,7 @@
 	
 	var React = __webpack_require__(13);
 	var ContextWrapper = __webpack_require__(135);
-	var assign = __webpack_require__(152);
+	var assign = __webpack_require__(153);
 	var PropTypes = __webpack_require__(134);
 	
 	var REF_NAME = '__routeHandler__';
@@ -9046,42 +9046,6 @@
 
 	'use strict';
 	
-	var HistoryLocation = __webpack_require__(100);
-	var History = __webpack_require__(105);
-	
-	/**
-	 * A Location that uses full page refreshes. This is used as
-	 * the fallback for HistoryLocation in browsers that do not
-	 * support the HTML5 history API.
-	 */
-	var RefreshLocation = {
-	
-	  push: function push(path) {
-	    window.location = path;
-	  },
-	
-	  replace: function replace(path) {
-	    window.location.replace(path);
-	  },
-	
-	  pop: History.back,
-	
-	  getCurrentPath: HistoryLocation.getCurrentPath,
-	
-	  toString: function toString() {
-	    return '<RefreshLocation>';
-	  }
-	
-	};
-	
-	module.exports = RefreshLocation;
-
-/***/ },
-/* 100 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
 	var LocationActions = __webpack_require__(136);
 	var History = __webpack_require__(105);
 	
@@ -9166,6 +9130,42 @@
 	};
 	
 	module.exports = HistoryLocation;
+
+/***/ },
+/* 100 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var HistoryLocation = __webpack_require__(99);
+	var History = __webpack_require__(105);
+	
+	/**
+	 * A Location that uses full page refreshes. This is used as
+	 * the fallback for HistoryLocation in browsers that do not
+	 * support the HTML5 history API.
+	 */
+	var RefreshLocation = {
+	
+	  push: function push(path) {
+	    window.location = path;
+	  },
+	
+	  replace: function replace(path) {
+	    window.location.replace(path);
+	  },
+	
+	  pop: History.back,
+	
+	  getCurrentPath: HistoryLocation.getCurrentPath,
+	
+	  toString: function toString() {
+	    return '<RefreshLocation>';
+	  }
+	
+	};
+	
+	module.exports = RefreshLocation;
 
 /***/ },
 /* 101 */
@@ -9573,7 +9573,7 @@
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	var assign = __webpack_require__(152);
+	var assign = __webpack_require__(153);
 	var invariant = __webpack_require__(154);
 	var warning = __webpack_require__(156);
 	var PathUtils = __webpack_require__(137);
@@ -9776,7 +9776,7 @@
 	'use strict';
 	
 	var React = __webpack_require__(13);
-	var assign = __webpack_require__(152);
+	var assign = __webpack_require__(153);
 	var warning = __webpack_require__(156);
 	var DefaultRoute = __webpack_require__(92);
 	var NotFoundRoute = __webpack_require__(1);
@@ -9868,20 +9868,20 @@
 	var LocationActions = __webpack_require__(136);
 	var ImitateBrowserBehavior = __webpack_require__(103);
 	var HashLocation = __webpack_require__(98);
-	var HistoryLocation = __webpack_require__(100);
-	var RefreshLocation = __webpack_require__(99);
+	var HistoryLocation = __webpack_require__(99);
+	var RefreshLocation = __webpack_require__(100);
 	var StaticLocation = __webpack_require__(101);
-	var ScrollHistory = __webpack_require__(140);
+	var ScrollHistory = __webpack_require__(138);
 	var createRoutesFromReactChildren = __webpack_require__(109);
-	var isReactChildren = __webpack_require__(141);
-	var Transition = __webpack_require__(142);
+	var isReactChildren = __webpack_require__(139);
+	var Transition = __webpack_require__(140);
 	var PropTypes = __webpack_require__(134);
-	var Redirect = __webpack_require__(143);
+	var Redirect = __webpack_require__(141);
 	var History = __webpack_require__(105);
-	var Cancellation = __webpack_require__(144);
-	var Match = __webpack_require__(145);
+	var Cancellation = __webpack_require__(142);
+	var Match = __webpack_require__(143);
 	var Route = __webpack_require__(108);
-	var supportsHistory = __webpack_require__(146);
+	var supportsHistory = __webpack_require__(144);
 	var PathUtils = __webpack_require__(137);
 	
 	/**
@@ -10372,7 +10372,7 @@
 	}
 	
 	module.exports = createRouter;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(150)))
 
 /***/ },
 /* 111 */
@@ -10495,7 +10495,7 @@
 	
 	// TODO: Use `import React from "react";` when external modules are supported.
 	"use strict";
-	var src$react$$ = __webpack_require__(147), intl$messageformat$$ = __webpack_require__(138), intl$relativeformat$$ = __webpack_require__(139), intl$format$cache$$ = __webpack_require__(157);
+	var src$react$$ = __webpack_require__(147), intl$messageformat$$ = __webpack_require__(146), intl$relativeformat$$ = __webpack_require__(145), intl$format$cache$$ = __webpack_require__(157);
 	
 	// -----------------------------------------------------------------------------
 	
@@ -10942,7 +10942,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(13);
-	var classSet = __webpack_require__(150);
+	var classSet = __webpack_require__(149);
 	
 	function isLeftClickEvent(event) {
 	  return event.button === 0;
@@ -11800,7 +11800,7 @@
 	}
 	
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(150)))
 
 /***/ },
 /* 129 */
@@ -12166,7 +12166,7 @@
 
 	'use strict';
 	
-	var assign = __webpack_require__(152);
+	var assign = __webpack_require__(153);
 	var ReactPropTypes = __webpack_require__(13).PropTypes;
 	var Route = __webpack_require__(108);
 	
@@ -12431,53 +12431,11 @@
 /* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* jshint node:true */
-	
-	'use strict';
-	
-	var IntlMessageFormat = __webpack_require__(159)['default'];
-	
-	// Add all locale data to `IntlMessageFormat`. This module will be ignored when
-	// bundling for the browser with Browserify/Webpack.
-	__webpack_require__(158);
-	
-	// Re-export `IntlMessageFormat` as the CommonJS default exports with all the
-	// locale data registered, and with English set as the default locale. Define
-	// the `default` prop for use with other compiled ES6 Modules.
-	exports = module.exports = IntlMessageFormat;
-	exports['default'] = exports;
-
-
-/***/ },
-/* 139 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* jshint node:true */
-	
-	'use strict';
-	
-	var IntlRelativeFormat = __webpack_require__(161)['default'];
-	
-	// Add all locale data to `IntlRelativeFormat`. This module will be ignored when
-	// bundling for the browser with Browserify/Webpack.
-	__webpack_require__(160);
-	
-	// Re-export `IntlRelativeFormat` as the CommonJS default exports with all the
-	// locale data registered, and with English set as the default locale. Define
-	// the `default` prop for use with other compiled ES6 Modules.
-	exports = module.exports = IntlRelativeFormat;
-	exports['default'] = exports;
-
-
-/***/ },
-/* 140 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 	
 	var invariant = __webpack_require__(154);
 	var canUseDOM = __webpack_require__(155).canUseDOM;
-	var getWindowScrollPosition = __webpack_require__(162);
+	var getWindowScrollPosition = __webpack_require__(158);
 	
 	function shouldUpdateScroll(state, prevState) {
 	  if (!prevState) {
@@ -12550,7 +12508,7 @@
 	module.exports = ScrollHistory;
 
 /***/ },
-/* 141 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12568,15 +12526,15 @@
 	module.exports = isReactChildren;
 
 /***/ },
-/* 142 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* jshint -W058 */
 	
 	'use strict';
 	
-	var Cancellation = __webpack_require__(144);
-	var Redirect = __webpack_require__(143);
+	var Cancellation = __webpack_require__(142);
+	var Redirect = __webpack_require__(141);
 	
 	/**
 	 * Encapsulates a transition to a given path.
@@ -12648,7 +12606,7 @@
 	module.exports = Transition;
 
 /***/ },
-/* 143 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12665,7 +12623,7 @@
 	module.exports = Redirect;
 
 /***/ },
-/* 144 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12679,7 +12637,7 @@
 	module.exports = Cancellation;
 
 /***/ },
-/* 145 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12759,7 +12717,7 @@
 	module.exports = Match;
 
 /***/ },
-/* 146 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12778,6 +12736,48 @@
 	}
 	
 	module.exports = supportsHistory;
+
+/***/ },
+/* 145 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* jshint node:true */
+	
+	'use strict';
+	
+	var IntlRelativeFormat = __webpack_require__(160)['default'];
+	
+	// Add all locale data to `IntlRelativeFormat`. This module will be ignored when
+	// bundling for the browser with Browserify/Webpack.
+	__webpack_require__(159);
+	
+	// Re-export `IntlRelativeFormat` as the CommonJS default exports with all the
+	// locale data registered, and with English set as the default locale. Define
+	// the `default` prop for use with other compiled ES6 Modules.
+	exports = module.exports = IntlRelativeFormat;
+	exports['default'] = exports;
+
+
+/***/ },
+/* 146 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* jshint node:true */
+	
+	'use strict';
+	
+	var IntlMessageFormat = __webpack_require__(162)['default'];
+	
+	// Add all locale data to `IntlMessageFormat`. This module will be ignored when
+	// bundling for the browser with Browserify/Webpack.
+	__webpack_require__(161);
+	
+	// Re-export `IntlMessageFormat` as the CommonJS default exports with all the
+	// locale data registered, and with English set as the default locale. Define
+	// the `default` prop for use with other compiled ES6 Modules.
+	exports = module.exports = IntlMessageFormat;
+	exports['default'] = exports;
+
 
 /***/ },
 /* 147 */
@@ -12831,6 +12831,59 @@
 
 /***/ },
 /* 149 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2015 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	
+	function classNames () {
+		'use strict';
+	
+		var classes = '';
+	
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+	
+			var argType = typeof arg;
+	
+			if ('string' === argType || 'number' === argType) {
+				classes += ' ' + arg;
+	
+			} else if (Array.isArray(arg)) {
+				classes += ' ' + classNames.apply(null, arg);
+	
+			} else if ('object' === argType) {
+				for (var key in arg) {
+					if (arg.hasOwnProperty(key) && arg[key]) {
+						classes += ' ' + key;
+					}
+				}
+			}
+		}
+	
+		return classes.substr(1);
+	}
+	
+	// safely export classNames for node / browserify
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	}
+	
+	/* global define */
+	// safely export classNames for RequireJS
+	if (true) {
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+			return classNames;
+		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}
+
+
+/***/ },
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// shim for using process in browser
@@ -12926,59 +12979,6 @@
 
 
 /***/ },
-/* 150 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2015 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	
-	function classNames () {
-		'use strict';
-	
-		var classes = '';
-	
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-	
-			var argType = typeof arg;
-	
-			if ('string' === argType || 'number' === argType) {
-				classes += ' ' + arg;
-	
-			} else if (Array.isArray(arg)) {
-				classes += ' ' + classNames.apply(null, arg);
-	
-			} else if ('object' === argType) {
-				for (var key in arg) {
-					if (arg.hasOwnProperty(key) && arg[key]) {
-						classes += ' ' + key;
-					}
-				}
-			}
-		}
-	
-		return classes.substr(1);
-	}
-	
-	// safely export classNames for node / browserify
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = classNames;
-	}
-	
-	/* global define */
-	// safely export classNames for RequireJS
-	if (true) {
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
-			return classNames;
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}
-
-
-/***/ },
 /* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -13036,6 +13036,51 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule joinClasses
+	 * @typechecks static-only
+	 */
+	
+	'use strict';
+	
+	/**
+	 * Combines multiple className strings into one.
+	 * http://jsperf.com/joinclasses-args-vs-array
+	 *
+	 * @param {...?string} classes
+	 * @return {string}
+	 */
+	function joinClasses(className/*, ... */) {
+	  if (!className) {
+	    className = '';
+	  }
+	  var nextClass;
+	  var argLength = arguments.length;
+	  if (argLength > 1) {
+	    for (var ii = 1; ii < argLength; ii++) {
+	      nextClass = arguments[ii];
+	      if (nextClass) {
+	        className = (className ? className + ' ' : '') + nextClass;
+	      }
+	    }
+	  }
+	  return className;
+	}
+	
+	module.exports = joinClasses;
+
+
+/***/ },
+/* 153 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
 	 * Copyright 2014-2015, Facebook, Inc.
 	 * All rights reserved.
 	 *
@@ -13082,51 +13127,6 @@
 	}
 	
 	module.exports = assign;
-
-
-/***/ },
-/* 153 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule joinClasses
-	 * @typechecks static-only
-	 */
-	
-	'use strict';
-	
-	/**
-	 * Combines multiple className strings into one.
-	 * http://jsperf.com/joinclasses-args-vs-array
-	 *
-	 * @param {...?string} classes
-	 * @return {string}
-	 */
-	function joinClasses(className/*, ... */) {
-	  if (!className) {
-	    className = '';
-	  }
-	  var nextClass;
-	  var argLength = arguments.length;
-	  if (argLength > 1) {
-	    for (var ii = 1; ii < argLength; ii++) {
-	      nextClass = arguments[ii];
-	      if (nextClass) {
-	        className = (className ? className + ' ' : '') + nextClass;
-	      }
-	    }
-	  }
-	  return className;
-	}
-	
-	module.exports = joinClasses;
 
 
 /***/ },
@@ -13187,7 +13187,7 @@
 	
 	module.exports = invariant;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(150)))
 
 /***/ },
 /* 155 */
@@ -13301,7 +13301,7 @@
 	
 	module.exports = warning;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(150)))
 
 /***/ },
 /* 157 */
@@ -13315,50 +13315,6 @@
 
 /***/ },
 /* 158 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* (ignored) */
-
-/***/ },
-/* 159 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* jslint esnext: true */
-	
-	"use strict";
-	var src$core$$ = __webpack_require__(167), src$en$$ = __webpack_require__(168);
-	
-	src$core$$["default"].__addLocaleData(src$en$$["default"]);
-	src$core$$["default"].defaultLocale = 'en';
-	
-	exports["default"] = src$core$$["default"];
-	
-	//# sourceMappingURL=main.js.map
-
-/***/ },
-/* 160 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* (ignored) */
-
-/***/ },
-/* 161 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* jslint esnext: true */
-	
-	"use strict";
-	var src$core$$ = __webpack_require__(169), src$en$$ = __webpack_require__(170);
-	
-	src$core$$["default"].__addLocaleData(src$en$$["default"]);
-	src$core$$["default"].defaultLocale = 'en';
-	
-	exports["default"] = src$core$$["default"];
-	
-	//# sourceMappingURL=main.js.map
-
-/***/ },
-/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13379,6 +13335,50 @@
 	}
 	
 	module.exports = getWindowScrollPosition;
+
+/***/ },
+/* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* (ignored) */
+
+/***/ },
+/* 160 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* jslint esnext: true */
+	
+	"use strict";
+	var src$core$$ = __webpack_require__(167), src$en$$ = __webpack_require__(168);
+	
+	src$core$$["default"].__addLocaleData(src$en$$["default"]);
+	src$core$$["default"].defaultLocale = 'en';
+	
+	exports["default"] = src$core$$["default"];
+	
+	//# sourceMappingURL=main.js.map
+
+/***/ },
+/* 161 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* (ignored) */
+
+/***/ },
+/* 162 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* jslint esnext: true */
+	
+	"use strict";
+	var src$core$$ = __webpack_require__(169), src$en$$ = __webpack_require__(170);
+	
+	src$core$$["default"].__addLocaleData(src$en$$["default"]);
+	src$core$$["default"].defaultLocale = 'en';
+	
+	exports["default"] = src$core$$["default"];
+	
+	//# sourceMappingURL=main.js.map
 
 /***/ },
 /* 163 */
@@ -13551,286 +13551,7 @@
 	/* jslint esnext: true */
 	
 	"use strict";
-	var src$utils$$ = __webpack_require__(173), src$es5$$ = __webpack_require__(174), src$compiler$$ = __webpack_require__(175), intl$messageformat$parser$$ = __webpack_require__(178);
-	exports["default"] = MessageFormat;
-	
-	// -- MessageFormat --------------------------------------------------------
-	
-	function MessageFormat(message, locales, formats) {
-	    // Parse string messages into an AST.
-	    var ast = typeof message === 'string' ?
-	            MessageFormat.__parse(message) : message;
-	
-	    if (!(ast && ast.type === 'messageFormatPattern')) {
-	        throw new TypeError('A message must be provided as a String or AST.');
-	    }
-	
-	    // Creates a new object with the specified `formats` merged with the default
-	    // formats.
-	    formats = this._mergeFormats(MessageFormat.formats, formats);
-	
-	    // Defined first because it's used to build the format pattern.
-	    src$es5$$.defineProperty(this, '_locale',  {value: this._resolveLocale(locales)});
-	
-	    // Compile the `ast` to a pattern that is highly optimized for repeated
-	    // `format()` invocations. **Note:** This passes the `locales` set provided
-	    // to the constructor instead of just the resolved locale.
-	    var pluralFn = this._findPluralRuleFunction(this._locale);
-	    var pattern  = this._compilePattern(ast, locales, formats, pluralFn);
-	
-	    // "Bind" `format()` method to `this` so it can be passed by reference like
-	    // the other `Intl` APIs.
-	    var messageFormat = this;
-	    this.format = function (values) {
-	        return messageFormat._format(pattern, values);
-	    };
-	}
-	
-	// Default format options used as the prototype of the `formats` provided to the
-	// constructor. These are used when constructing the internal Intl.NumberFormat
-	// and Intl.DateTimeFormat instances.
-	src$es5$$.defineProperty(MessageFormat, 'formats', {
-	    enumerable: true,
-	
-	    value: {
-	        number: {
-	            'currency': {
-	                style: 'currency'
-	            },
-	
-	            'percent': {
-	                style: 'percent'
-	            }
-	        },
-	
-	        date: {
-	            'short': {
-	                month: 'numeric',
-	                day  : 'numeric',
-	                year : '2-digit'
-	            },
-	
-	            'medium': {
-	                month: 'short',
-	                day  : 'numeric',
-	                year : 'numeric'
-	            },
-	
-	            'long': {
-	                month: 'long',
-	                day  : 'numeric',
-	                year : 'numeric'
-	            },
-	
-	            'full': {
-	                weekday: 'long',
-	                month  : 'long',
-	                day    : 'numeric',
-	                year   : 'numeric'
-	            }
-	        },
-	
-	        time: {
-	            'short': {
-	                hour  : 'numeric',
-	                minute: 'numeric'
-	            },
-	
-	            'medium':  {
-	                hour  : 'numeric',
-	                minute: 'numeric',
-	                second: 'numeric'
-	            },
-	
-	            'long': {
-	                hour        : 'numeric',
-	                minute      : 'numeric',
-	                second      : 'numeric',
-	                timeZoneName: 'short'
-	            },
-	
-	            'full': {
-	                hour        : 'numeric',
-	                minute      : 'numeric',
-	                second      : 'numeric',
-	                timeZoneName: 'short'
-	            }
-	        }
-	    }
-	});
-	
-	// Define internal private properties for dealing with locale data.
-	src$es5$$.defineProperty(MessageFormat, '__localeData__', {value: src$es5$$.objCreate(null)});
-	src$es5$$.defineProperty(MessageFormat, '__addLocaleData', {value: function (data) {
-	    if (!(data && data.locale)) {
-	        throw new Error(
-	            'Locale data provided to IntlMessageFormat is missing a ' +
-	            '`locale` property'
-	        );
-	    }
-	
-	    MessageFormat.__localeData__[data.locale.toLowerCase()] = data;
-	}});
-	
-	// Defines `__parse()` static method as an exposed private.
-	src$es5$$.defineProperty(MessageFormat, '__parse', {value: intl$messageformat$parser$$["default"].parse});
-	
-	// Define public `defaultLocale` property which defaults to English, but can be
-	// set by the developer.
-	src$es5$$.defineProperty(MessageFormat, 'defaultLocale', {
-	    enumerable: true,
-	    writable  : true,
-	    value     : undefined
-	});
-	
-	MessageFormat.prototype.resolvedOptions = function () {
-	    // TODO: Provide anything else?
-	    return {
-	        locale: this._locale
-	    };
-	};
-	
-	MessageFormat.prototype._compilePattern = function (ast, locales, formats, pluralFn) {
-	    var compiler = new src$compiler$$["default"](locales, formats, pluralFn);
-	    return compiler.compile(ast);
-	};
-	
-	MessageFormat.prototype._findPluralRuleFunction = function (locale) {
-	    var localeData = MessageFormat.__localeData__;
-	    var data       = localeData[locale.toLowerCase()];
-	
-	    // The locale data is de-duplicated, so we have to traverse the locale's
-	    // hierarchy until we find a `pluralRuleFunction` to return.
-	    while (data) {
-	        if (data.pluralRuleFunction) {
-	            return data.pluralRuleFunction;
-	        }
-	
-	        data = data.parentLocale && localeData[data.parentLocale.toLowerCase()];
-	    }
-	
-	    throw new Error(
-	        'Locale data added to IntlMessageFormat is missing a ' +
-	        '`pluralRuleFunction` for :' + locale
-	    );
-	};
-	
-	MessageFormat.prototype._format = function (pattern, values) {
-	    var result = '',
-	        i, len, part, id, value;
-	
-	    for (i = 0, len = pattern.length; i < len; i += 1) {
-	        part = pattern[i];
-	
-	        // Exist early for string parts.
-	        if (typeof part === 'string') {
-	            result += part;
-	            continue;
-	        }
-	
-	        id = part.id;
-	
-	        // Enforce that all required values are provided by the caller.
-	        if (!(values && src$utils$$.hop.call(values, id))) {
-	            throw new Error('A value must be provided for: ' + id);
-	        }
-	
-	        value = values[id];
-	
-	        // Recursively format plural and select parts' option — which can be a
-	        // nested pattern structure. The choosing of the option to use is
-	        // abstracted-by and delegated-to the part helper object.
-	        if (part.options) {
-	            result += this._format(part.getOption(value), values);
-	        } else {
-	            result += part.format(value);
-	        }
-	    }
-	
-	    return result;
-	};
-	
-	MessageFormat.prototype._mergeFormats = function (defaults, formats) {
-	    var mergedFormats = {},
-	        type, mergedType;
-	
-	    for (type in defaults) {
-	        if (!src$utils$$.hop.call(defaults, type)) { continue; }
-	
-	        mergedFormats[type] = mergedType = src$es5$$.objCreate(defaults[type]);
-	
-	        if (formats && src$utils$$.hop.call(formats, type)) {
-	            src$utils$$.extend(mergedType, formats[type]);
-	        }
-	    }
-	
-	    return mergedFormats;
-	};
-	
-	MessageFormat.prototype._resolveLocale = function (locales) {
-	    if (typeof locales === 'string') {
-	        locales = [locales];
-	    }
-	
-	    // Create a copy of the array so we can push on the default locale.
-	    locales = (locales || []).concat(MessageFormat.defaultLocale);
-	
-	    var localeData = MessageFormat.__localeData__;
-	    var i, len, localeParts, data;
-	
-	    // Using the set of locales + the default locale, we look for the first one
-	    // which that has been registered. When data does not exist for a locale, we
-	    // traverse its ancestors to find something that's been registered within
-	    // its hierarchy of locales. Since we lack the proper `parentLocale` data
-	    // here, we must take a naive approach to traversal.
-	    for (i = 0, len = locales.length; i < len; i += 1) {
-	        localeParts = locales[i].toLowerCase().split('-');
-	
-	        while (localeParts.length) {
-	            data = localeData[localeParts.join('-')];
-	            if (data) {
-	                // Return the normalized locale string; e.g., we return "en-US",
-	                // instead of "en-us".
-	                return data.locale;
-	            }
-	
-	            localeParts.pop();
-	        }
-	    }
-	
-	    var defaultLocale = locales.pop();
-	    throw new Error(
-	        'No locale data has been added to IntlMessageFormat for: ' +
-	        locales.join(', ') + ', or the default locale: ' + defaultLocale
-	    );
-	};
-	
-	//# sourceMappingURL=core.js.map
-
-/***/ },
-/* 168 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// GENERATED FILE
-	"use strict";
-	exports["default"] = {"locale":"en","pluralRuleFunction":function (n,ord){var s=String(n).split("."),v0=!s[1],t0=Number(s[0])==n,n10=t0&&s[0].slice(-1),n100=t0&&s[0].slice(-2);if(ord)return n10==1&&n100!=11?"one":n10==2&&n100!=12?"two":n10==3&&n100!=13?"few":"other";return n==1&&v0?"one":"other"}};
-	
-	//# sourceMappingURL=en.js.map
-
-/***/ },
-/* 169 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
-	Copyrights licensed under the New BSD License.
-	See the accompanying LICENSE file for terms.
-	*/
-	
-	/* jslint esnext: true */
-	
-	"use strict";
-	var intl$messageformat$$ = __webpack_require__(138), src$diff$$ = __webpack_require__(176), src$es5$$ = __webpack_require__(177);
+	var intl$messageformat$$ = __webpack_require__(146), src$diff$$ = __webpack_require__(173), src$es5$$ = __webpack_require__(174);
 	exports["default"] = RelativeFormat;
 	
 	// -----------------------------------------------------------------------------
@@ -14120,7 +13841,7 @@
 	//# sourceMappingURL=core.js.map
 
 /***/ },
-/* 170 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// GENERATED FILE
@@ -14130,13 +13851,292 @@
 	//# sourceMappingURL=en.js.map
 
 /***/ },
+/* 169 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
+	Copyrights licensed under the New BSD License.
+	See the accompanying LICENSE file for terms.
+	*/
+	
+	/* jslint esnext: true */
+	
+	"use strict";
+	var src$utils$$ = __webpack_require__(175), src$es5$$ = __webpack_require__(176), src$compiler$$ = __webpack_require__(177), intl$messageformat$parser$$ = __webpack_require__(180);
+	exports["default"] = MessageFormat;
+	
+	// -- MessageFormat --------------------------------------------------------
+	
+	function MessageFormat(message, locales, formats) {
+	    // Parse string messages into an AST.
+	    var ast = typeof message === 'string' ?
+	            MessageFormat.__parse(message) : message;
+	
+	    if (!(ast && ast.type === 'messageFormatPattern')) {
+	        throw new TypeError('A message must be provided as a String or AST.');
+	    }
+	
+	    // Creates a new object with the specified `formats` merged with the default
+	    // formats.
+	    formats = this._mergeFormats(MessageFormat.formats, formats);
+	
+	    // Defined first because it's used to build the format pattern.
+	    src$es5$$.defineProperty(this, '_locale',  {value: this._resolveLocale(locales)});
+	
+	    // Compile the `ast` to a pattern that is highly optimized for repeated
+	    // `format()` invocations. **Note:** This passes the `locales` set provided
+	    // to the constructor instead of just the resolved locale.
+	    var pluralFn = this._findPluralRuleFunction(this._locale);
+	    var pattern  = this._compilePattern(ast, locales, formats, pluralFn);
+	
+	    // "Bind" `format()` method to `this` so it can be passed by reference like
+	    // the other `Intl` APIs.
+	    var messageFormat = this;
+	    this.format = function (values) {
+	        return messageFormat._format(pattern, values);
+	    };
+	}
+	
+	// Default format options used as the prototype of the `formats` provided to the
+	// constructor. These are used when constructing the internal Intl.NumberFormat
+	// and Intl.DateTimeFormat instances.
+	src$es5$$.defineProperty(MessageFormat, 'formats', {
+	    enumerable: true,
+	
+	    value: {
+	        number: {
+	            'currency': {
+	                style: 'currency'
+	            },
+	
+	            'percent': {
+	                style: 'percent'
+	            }
+	        },
+	
+	        date: {
+	            'short': {
+	                month: 'numeric',
+	                day  : 'numeric',
+	                year : '2-digit'
+	            },
+	
+	            'medium': {
+	                month: 'short',
+	                day  : 'numeric',
+	                year : 'numeric'
+	            },
+	
+	            'long': {
+	                month: 'long',
+	                day  : 'numeric',
+	                year : 'numeric'
+	            },
+	
+	            'full': {
+	                weekday: 'long',
+	                month  : 'long',
+	                day    : 'numeric',
+	                year   : 'numeric'
+	            }
+	        },
+	
+	        time: {
+	            'short': {
+	                hour  : 'numeric',
+	                minute: 'numeric'
+	            },
+	
+	            'medium':  {
+	                hour  : 'numeric',
+	                minute: 'numeric',
+	                second: 'numeric'
+	            },
+	
+	            'long': {
+	                hour        : 'numeric',
+	                minute      : 'numeric',
+	                second      : 'numeric',
+	                timeZoneName: 'short'
+	            },
+	
+	            'full': {
+	                hour        : 'numeric',
+	                minute      : 'numeric',
+	                second      : 'numeric',
+	                timeZoneName: 'short'
+	            }
+	        }
+	    }
+	});
+	
+	// Define internal private properties for dealing with locale data.
+	src$es5$$.defineProperty(MessageFormat, '__localeData__', {value: src$es5$$.objCreate(null)});
+	src$es5$$.defineProperty(MessageFormat, '__addLocaleData', {value: function (data) {
+	    if (!(data && data.locale)) {
+	        throw new Error(
+	            'Locale data provided to IntlMessageFormat is missing a ' +
+	            '`locale` property'
+	        );
+	    }
+	
+	    MessageFormat.__localeData__[data.locale.toLowerCase()] = data;
+	}});
+	
+	// Defines `__parse()` static method as an exposed private.
+	src$es5$$.defineProperty(MessageFormat, '__parse', {value: intl$messageformat$parser$$["default"].parse});
+	
+	// Define public `defaultLocale` property which defaults to English, but can be
+	// set by the developer.
+	src$es5$$.defineProperty(MessageFormat, 'defaultLocale', {
+	    enumerable: true,
+	    writable  : true,
+	    value     : undefined
+	});
+	
+	MessageFormat.prototype.resolvedOptions = function () {
+	    // TODO: Provide anything else?
+	    return {
+	        locale: this._locale
+	    };
+	};
+	
+	MessageFormat.prototype._compilePattern = function (ast, locales, formats, pluralFn) {
+	    var compiler = new src$compiler$$["default"](locales, formats, pluralFn);
+	    return compiler.compile(ast);
+	};
+	
+	MessageFormat.prototype._findPluralRuleFunction = function (locale) {
+	    var localeData = MessageFormat.__localeData__;
+	    var data       = localeData[locale.toLowerCase()];
+	
+	    // The locale data is de-duplicated, so we have to traverse the locale's
+	    // hierarchy until we find a `pluralRuleFunction` to return.
+	    while (data) {
+	        if (data.pluralRuleFunction) {
+	            return data.pluralRuleFunction;
+	        }
+	
+	        data = data.parentLocale && localeData[data.parentLocale.toLowerCase()];
+	    }
+	
+	    throw new Error(
+	        'Locale data added to IntlMessageFormat is missing a ' +
+	        '`pluralRuleFunction` for :' + locale
+	    );
+	};
+	
+	MessageFormat.prototype._format = function (pattern, values) {
+	    var result = '',
+	        i, len, part, id, value;
+	
+	    for (i = 0, len = pattern.length; i < len; i += 1) {
+	        part = pattern[i];
+	
+	        // Exist early for string parts.
+	        if (typeof part === 'string') {
+	            result += part;
+	            continue;
+	        }
+	
+	        id = part.id;
+	
+	        // Enforce that all required values are provided by the caller.
+	        if (!(values && src$utils$$.hop.call(values, id))) {
+	            throw new Error('A value must be provided for: ' + id);
+	        }
+	
+	        value = values[id];
+	
+	        // Recursively format plural and select parts' option — which can be a
+	        // nested pattern structure. The choosing of the option to use is
+	        // abstracted-by and delegated-to the part helper object.
+	        if (part.options) {
+	            result += this._format(part.getOption(value), values);
+	        } else {
+	            result += part.format(value);
+	        }
+	    }
+	
+	    return result;
+	};
+	
+	MessageFormat.prototype._mergeFormats = function (defaults, formats) {
+	    var mergedFormats = {},
+	        type, mergedType;
+	
+	    for (type in defaults) {
+	        if (!src$utils$$.hop.call(defaults, type)) { continue; }
+	
+	        mergedFormats[type] = mergedType = src$es5$$.objCreate(defaults[type]);
+	
+	        if (formats && src$utils$$.hop.call(formats, type)) {
+	            src$utils$$.extend(mergedType, formats[type]);
+	        }
+	    }
+	
+	    return mergedFormats;
+	};
+	
+	MessageFormat.prototype._resolveLocale = function (locales) {
+	    if (typeof locales === 'string') {
+	        locales = [locales];
+	    }
+	
+	    // Create a copy of the array so we can push on the default locale.
+	    locales = (locales || []).concat(MessageFormat.defaultLocale);
+	
+	    var localeData = MessageFormat.__localeData__;
+	    var i, len, localeParts, data;
+	
+	    // Using the set of locales + the default locale, we look for the first one
+	    // which that has been registered. When data does not exist for a locale, we
+	    // traverse its ancestors to find something that's been registered within
+	    // its hierarchy of locales. Since we lack the proper `parentLocale` data
+	    // here, we must take a naive approach to traversal.
+	    for (i = 0, len = locales.length; i < len; i += 1) {
+	        localeParts = locales[i].toLowerCase().split('-');
+	
+	        while (localeParts.length) {
+	            data = localeData[localeParts.join('-')];
+	            if (data) {
+	                // Return the normalized locale string; e.g., we return "en-US",
+	                // instead of "en-us".
+	                return data.locale;
+	            }
+	
+	            localeParts.pop();
+	        }
+	    }
+	
+	    var defaultLocale = locales.pop();
+	    throw new Error(
+	        'No locale data has been added to IntlMessageFormat for: ' +
+	        locales.join(', ') + ', or the default locale: ' + defaultLocale
+	    );
+	};
+	
+	//# sourceMappingURL=core.js.map
+
+/***/ },
+/* 170 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// GENERATED FILE
+	"use strict";
+	exports["default"] = {"locale":"en","pluralRuleFunction":function (n,ord){var s=String(n).split("."),v0=!s[1],t0=Number(s[0])==n,n10=t0&&s[0].slice(-1),n100=t0&&s[0].slice(-2);if(ord)return n10==1&&n100!=11?"one":n10==2&&n100!=12?"two":n10==3&&n100!=13?"few":"other";return n==1&&v0?"one":"other"}};
+	
+	//# sourceMappingURL=en.js.map
+
+/***/ },
 /* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Load modules
 	
-	var Stringify = __webpack_require__(179);
-	var Parse = __webpack_require__(180);
+	var Stringify = __webpack_require__(178);
+	var Parse = __webpack_require__(179);
 	
 	
 	// Declare internals
@@ -14210,6 +14210,137 @@
 	/* jslint esnext: true */
 	
 	"use strict";
+	
+	var round = Math.round;
+	
+	function daysToYears(days) {
+	    // 400 years have 146097 days (taking into account leap year rules)
+	    return days * 400 / 146097;
+	}
+	
+	exports["default"] = function (from, to) {
+	    // Convert to ms timestamps.
+	    from = +from;
+	    to   = +to;
+	
+	    var millisecond = round(to - from),
+	        second      = round(millisecond / 1000),
+	        minute      = round(second / 60),
+	        hour        = round(minute / 60),
+	        day         = round(hour / 24),
+	        week        = round(day / 7);
+	
+	    var rawYears = daysToYears(day),
+	        month    = round(rawYears * 12),
+	        year     = round(rawYears);
+	
+	    return {
+	        millisecond: millisecond,
+	        second     : second,
+	        minute     : minute,
+	        hour       : hour,
+	        day        : day,
+	        week       : week,
+	        month      : month,
+	        year       : year
+	    };
+	};
+	
+	//# sourceMappingURL=diff.js.map
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
+	Copyrights licensed under the New BSD License.
+	See the accompanying LICENSE file for terms.
+	*/
+	
+	/* jslint esnext: true */
+	
+	"use strict";
+	
+	// Purposely using the same implementation as the Intl.js `Intl` polyfill.
+	// Copyright 2013 Andy Earnshaw, MIT License
+	
+	var hop = Object.prototype.hasOwnProperty;
+	var toString = Object.prototype.toString;
+	
+	var realDefineProp = (function () {
+	    try { return !!Object.defineProperty({}, 'a', {}); }
+	    catch (e) { return false; }
+	})();
+	
+	var es3 = !realDefineProp && !Object.prototype.__defineGetter__;
+	
+	var defineProperty = realDefineProp ? Object.defineProperty :
+	        function (obj, name, desc) {
+	
+	    if ('get' in desc && obj.__defineGetter__) {
+	        obj.__defineGetter__(name, desc.get);
+	    } else if (!hop.call(obj, name) || 'value' in desc) {
+	        obj[name] = desc.value;
+	    }
+	};
+	
+	var objCreate = Object.create || function (proto, props) {
+	    var obj, k;
+	
+	    function F() {}
+	    F.prototype = proto;
+	    obj = new F();
+	
+	    for (k in props) {
+	        if (hop.call(props, k)) {
+	            defineProperty(obj, k, props[k]);
+	        }
+	    }
+	
+	    return obj;
+	};
+	
+	var arrIndexOf = Array.prototype.indexOf || function (search, fromIndex) {
+	    /*jshint validthis:true */
+	    var arr = this;
+	    if (!arr.length) {
+	        return -1;
+	    }
+	
+	    for (var i = fromIndex || 0, max = arr.length; i < max; i++) {
+	        if (arr[i] === search) {
+	            return i;
+	        }
+	    }
+	
+	    return -1;
+	};
+	
+	var isArray = Array.isArray || function (obj) {
+	    return toString.call(obj) === '[object Array]';
+	};
+	
+	var dateNow = Date.now || function () {
+	    return new Date().getTime();
+	};
+	exports.defineProperty = defineProperty, exports.objCreate = objCreate, exports.arrIndexOf = arrIndexOf, exports.isArray = isArray, exports.dateNow = dateNow;
+	
+	//# sourceMappingURL=es5.js.map
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
+	Copyrights licensed under the New BSD License.
+	See the accompanying LICENSE file for terms.
+	*/
+	
+	/* jslint esnext: true */
+	
+	"use strict";
 	exports.extend = extend;
 	var hop = Object.prototype.hasOwnProperty;
 	
@@ -14235,7 +14366,7 @@
 	//# sourceMappingURL=utils.js.map
 
 /***/ },
-/* 174 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -14247,7 +14378,7 @@
 	/* jslint esnext: true */
 	
 	"use strict";
-	var src$utils$$ = __webpack_require__(173);
+	var src$utils$$ = __webpack_require__(175);
 	
 	// Purposely using the same implementation as the Intl.js `Intl` polyfill.
 	// Copyright 2013 Andy Earnshaw, MIT License
@@ -14289,7 +14420,7 @@
 	//# sourceMappingURL=es5.js.map
 
 /***/ },
-/* 175 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -14503,148 +14634,7 @@
 	//# sourceMappingURL=compiler.js.map
 
 /***/ },
-/* 176 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
-	Copyrights licensed under the New BSD License.
-	See the accompanying LICENSE file for terms.
-	*/
-	
-	/* jslint esnext: true */
-	
-	"use strict";
-	
-	var round = Math.round;
-	
-	function daysToYears(days) {
-	    // 400 years have 146097 days (taking into account leap year rules)
-	    return days * 400 / 146097;
-	}
-	
-	exports["default"] = function (from, to) {
-	    // Convert to ms timestamps.
-	    from = +from;
-	    to   = +to;
-	
-	    var millisecond = round(to - from),
-	        second      = round(millisecond / 1000),
-	        minute      = round(second / 60),
-	        hour        = round(minute / 60),
-	        day         = round(hour / 24),
-	        week        = round(day / 7);
-	
-	    var rawYears = daysToYears(day),
-	        month    = round(rawYears * 12),
-	        year     = round(rawYears);
-	
-	    return {
-	        millisecond: millisecond,
-	        second     : second,
-	        minute     : minute,
-	        hour       : hour,
-	        day        : day,
-	        week       : week,
-	        month      : month,
-	        year       : year
-	    };
-	};
-	
-	//# sourceMappingURL=diff.js.map
-
-/***/ },
-/* 177 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
-	Copyrights licensed under the New BSD License.
-	See the accompanying LICENSE file for terms.
-	*/
-	
-	/* jslint esnext: true */
-	
-	"use strict";
-	
-	// Purposely using the same implementation as the Intl.js `Intl` polyfill.
-	// Copyright 2013 Andy Earnshaw, MIT License
-	
-	var hop = Object.prototype.hasOwnProperty;
-	var toString = Object.prototype.toString;
-	
-	var realDefineProp = (function () {
-	    try { return !!Object.defineProperty({}, 'a', {}); }
-	    catch (e) { return false; }
-	})();
-	
-	var es3 = !realDefineProp && !Object.prototype.__defineGetter__;
-	
-	var defineProperty = realDefineProp ? Object.defineProperty :
-	        function (obj, name, desc) {
-	
-	    if ('get' in desc && obj.__defineGetter__) {
-	        obj.__defineGetter__(name, desc.get);
-	    } else if (!hop.call(obj, name) || 'value' in desc) {
-	        obj[name] = desc.value;
-	    }
-	};
-	
-	var objCreate = Object.create || function (proto, props) {
-	    var obj, k;
-	
-	    function F() {}
-	    F.prototype = proto;
-	    obj = new F();
-	
-	    for (k in props) {
-	        if (hop.call(props, k)) {
-	            defineProperty(obj, k, props[k]);
-	        }
-	    }
-	
-	    return obj;
-	};
-	
-	var arrIndexOf = Array.prototype.indexOf || function (search, fromIndex) {
-	    /*jshint validthis:true */
-	    var arr = this;
-	    if (!arr.length) {
-	        return -1;
-	    }
-	
-	    for (var i = fromIndex || 0, max = arr.length; i < max; i++) {
-	        if (arr[i] === search) {
-	            return i;
-	        }
-	    }
-	
-	    return -1;
-	};
-	
-	var isArray = Array.isArray || function (obj) {
-	    return toString.call(obj) === '[object Array]';
-	};
-	
-	var dateNow = Date.now || function () {
-	    return new Date().getTime();
-	};
-	exports.defineProperty = defineProperty, exports.objCreate = objCreate, exports.arrIndexOf = arrIndexOf, exports.isArray = isArray, exports.dateNow = dateNow;
-	
-	//# sourceMappingURL=es5.js.map
-
-/***/ },
 /* 178 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	exports = module.exports = __webpack_require__(182)['default'];
-	exports['default'] = exports;
-
-
-/***/ },
-/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Load modules
@@ -14747,7 +14737,7 @@
 
 
 /***/ },
-/* 180 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Load modules
@@ -14911,6 +14901,16 @@
 	
 	    return Utils.compact(obj);
 	};
+
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	exports = module.exports = __webpack_require__(182)['default'];
+	exports['default'] = exports;
 
 
 /***/ },
