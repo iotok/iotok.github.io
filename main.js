@@ -2486,7 +2486,7 @@
 	
 	"use strict";
 	exports.__addLocaleData = __addLocaleData;
-	var intl$messageformat$$ = __webpack_require__(146), intl$relativeformat$$ = __webpack_require__(145), src$en$$ = __webpack_require__(114), src$mixin$$ = __webpack_require__(115), src$components$date$$ = __webpack_require__(116), src$components$time$$ = __webpack_require__(113), src$components$relative$$ = __webpack_require__(117), src$components$number$$ = __webpack_require__(118), src$components$message$$ = __webpack_require__(119), src$components$html$message$$ = __webpack_require__(120);
+	var intl$messageformat$$ = __webpack_require__(145), intl$relativeformat$$ = __webpack_require__(146), src$en$$ = __webpack_require__(114), src$mixin$$ = __webpack_require__(115), src$components$date$$ = __webpack_require__(116), src$components$time$$ = __webpack_require__(113), src$components$relative$$ = __webpack_require__(117), src$components$number$$ = __webpack_require__(118), src$components$message$$ = __webpack_require__(119), src$components$html$message$$ = __webpack_require__(120);
 	function __addLocaleData(data) {
 	    intl$messageformat$$["default"].__addLocaleData(data);
 	    intl$relativeformat$$["default"].__addLocaleData(data);
@@ -2753,7 +2753,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -2901,7 +2901,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -2958,7 +2958,7 @@
 	
 	var _utilsDomUtils2 = _interopRequireDefault(_utilsDomUtils);
 	
-	var _utilsEventListener = __webpack_require__(124);
+	var _utilsEventListener = __webpack_require__(125);
 	
 	var _utilsEventListener2 = _interopRequireDefault(_utilsEventListener);
 	
@@ -3107,7 +3107,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3188,7 +3188,7 @@
 	
 	var _styleMaps2 = _interopRequireDefault(_styleMaps);
 	
-	var _utilsCustomPropTypes = __webpack_require__(125);
+	var _utilsCustomPropTypes = __webpack_require__(124);
 	
 	var _utilsCustomPropTypes2 = _interopRequireDefault(_utilsCustomPropTypes);
 	
@@ -3252,7 +3252,7 @@
 	
 	var _utilsValidComponentChildren2 = _interopRequireDefault(_utilsValidComponentChildren);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3302,7 +3302,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3413,7 +3413,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3583,7 +3583,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3679,7 +3679,7 @@
 	
 	var _CollapsibleMixin2 = _interopRequireDefault(_CollapsibleMixin);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3821,7 +3821,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4119,7 +4119,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4236,7 +4236,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4577,7 +4577,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4735,7 +4735,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4804,7 +4804,7 @@
 	
 	var _utilsDomUtils2 = _interopRequireDefault(_utilsDomUtils);
 	
-	var _utilsEventListener = __webpack_require__(124);
+	var _utilsEventListener = __webpack_require__(125);
 	
 	var _utilsEventListener2 = _interopRequireDefault(_utilsEventListener);
 	
@@ -4997,7 +4997,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5058,7 +5058,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5279,7 +5279,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5316,7 +5316,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5372,7 +5372,7 @@
 	
 	var _BootstrapMixin2 = _interopRequireDefault(_BootstrapMixin);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5487,7 +5487,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5571,7 +5571,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5587,7 +5587,7 @@
 	
 	var _utilsDomUtils2 = _interopRequireDefault(_utilsDomUtils);
 	
-	var _utilsEventListener = __webpack_require__(124);
+	var _utilsEventListener = __webpack_require__(125);
 	
 	var _utilsEventListener2 = _interopRequireDefault(_utilsEventListener);
 	
@@ -5777,7 +5777,7 @@
 	
 	var _CollapsibleMixin2 = _interopRequireDefault(_CollapsibleMixin);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5924,7 +5924,7 @@
 	
 	var _BootstrapMixin2 = _interopRequireDefault(_BootstrapMixin);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -6096,7 +6096,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -6634,7 +6634,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _utilsCustomPropTypes = __webpack_require__(125);
+	var _utilsCustomPropTypes = __webpack_require__(124);
 	
 	var _utilsCustomPropTypes2 = _interopRequireDefault(_utilsCustomPropTypes);
 	
@@ -6725,7 +6725,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -6766,7 +6766,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7010,7 +7010,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7120,7 +7120,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7200,7 +7200,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7259,7 +7259,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7363,7 +7363,7 @@
 	
 	var _BootstrapMixin2 = _interopRequireDefault(_BootstrapMixin);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7510,7 +7510,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7561,7 +7561,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7714,7 +7714,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8049,7 +8049,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8107,7 +8107,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8218,7 +8218,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8292,7 +8292,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8377,7 +8377,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -10372,7 +10372,7 @@
 	}
 	
 	module.exports = createRouter;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(150)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
 
 /***/ },
 /* 111 */
@@ -10495,7 +10495,7 @@
 	
 	// TODO: Use `import React from "react";` when external modules are supported.
 	"use strict";
-	var src$react$$ = __webpack_require__(147), intl$messageformat$$ = __webpack_require__(146), intl$relativeformat$$ = __webpack_require__(145), intl$format$cache$$ = __webpack_require__(157);
+	var src$react$$ = __webpack_require__(147), intl$messageformat$$ = __webpack_require__(145), intl$relativeformat$$ = __webpack_require__(146), intl$format$cache$$ = __webpack_require__(157);
 	
 	// -----------------------------------------------------------------------------
 	
@@ -11274,71 +11274,6 @@
 /* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Copyright 2013-2014 Facebook, Inc.
-	 *
-	 * This file contains a modified version of:
-	 * https://github.com/facebook/react/blob/v0.12.0/src/vendor/stubs/EventListener.js
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 *
-	 * TODO: remove in favour of solution provided by:
-	 *  https://github.com/facebook/react/issues/285
-	 */
-	
-	/**
-	 * Does not take into account specific nature of platform.
-	 */
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	var EventListener = {
-	  /**
-	   * Listen to DOM events during the bubble phase.
-	   *
-	   * @param {DOMEventTarget} target DOM element to register listener on.
-	   * @param {string} eventType Event type, e.g. 'click' or 'mouseover'.
-	   * @param {function} callback Callback function.
-	   * @return {object} Object with a `remove` method.
-	   */
-	  listen: function listen(target, eventType, callback) {
-	    if (target.addEventListener) {
-	      target.addEventListener(eventType, callback, false);
-	      return {
-	        remove: function remove() {
-	          target.removeEventListener(eventType, callback, false);
-	        }
-	      };
-	    } else if (target.attachEvent) {
-	      target.attachEvent('on' + eventType, callback);
-	      return {
-	        remove: function remove() {
-	          target.detachEvent('on' + eventType, callback);
-	        }
-	      };
-	    }
-	  }
-	};
-	
-	exports['default'] = EventListener;
-	module.exports = exports['default'];
-
-/***/ },
-/* 125 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
@@ -11420,6 +11355,71 @@
 	module.exports = exports['default'];
 
 /***/ },
+/* 125 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014 Facebook, Inc.
+	 *
+	 * This file contains a modified version of:
+	 * https://github.com/facebook/react/blob/v0.12.0/src/vendor/stubs/EventListener.js
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 * http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 *
+	 * TODO: remove in favour of solution provided by:
+	 *  https://github.com/facebook/react/issues/285
+	 */
+	
+	/**
+	 * Does not take into account specific nature of platform.
+	 */
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	var EventListener = {
+	  /**
+	   * Listen to DOM events during the bubble phase.
+	   *
+	   * @param {DOMEventTarget} target DOM element to register listener on.
+	   * @param {string} eventType Event type, e.g. 'click' or 'mouseover'.
+	   * @param {function} callback Callback function.
+	   * @return {object} Object with a `remove` method.
+	   */
+	  listen: function listen(target, eventType, callback) {
+	    if (target.addEventListener) {
+	      target.addEventListener(eventType, callback, false);
+	      return {
+	        remove: function remove() {
+	          target.removeEventListener(eventType, callback, false);
+	        }
+	      };
+	    } else if (target.attachEvent) {
+	      target.attachEvent('on' + eventType, callback);
+	      return {
+	        remove: function remove() {
+	          target.detachEvent('on' + eventType, callback);
+	        }
+	      };
+	    }
+	  }
+	};
+	
+	exports['default'] = EventListener;
+	module.exports = exports['default'];
+
+/***/ },
 /* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -11441,7 +11441,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -11525,7 +11525,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(151);
+	var _classnames = __webpack_require__(150);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -11800,7 +11800,7 @@
 	}
 	
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(150)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
 
 /***/ },
 /* 129 */
@@ -12745,16 +12745,16 @@
 	
 	'use strict';
 	
-	var IntlRelativeFormat = __webpack_require__(160)['default'];
+	var IntlMessageFormat = __webpack_require__(162)['default'];
 	
-	// Add all locale data to `IntlRelativeFormat`. This module will be ignored when
+	// Add all locale data to `IntlMessageFormat`. This module will be ignored when
 	// bundling for the browser with Browserify/Webpack.
-	__webpack_require__(159);
+	__webpack_require__(161);
 	
-	// Re-export `IntlRelativeFormat` as the CommonJS default exports with all the
+	// Re-export `IntlMessageFormat` as the CommonJS default exports with all the
 	// locale data registered, and with English set as the default locale. Define
 	// the `default` prop for use with other compiled ES6 Modules.
-	exports = module.exports = IntlRelativeFormat;
+	exports = module.exports = IntlMessageFormat;
 	exports['default'] = exports;
 
 
@@ -12766,16 +12766,16 @@
 	
 	'use strict';
 	
-	var IntlMessageFormat = __webpack_require__(162)['default'];
+	var IntlRelativeFormat = __webpack_require__(160)['default'];
 	
-	// Add all locale data to `IntlMessageFormat`. This module will be ignored when
+	// Add all locale data to `IntlRelativeFormat`. This module will be ignored when
 	// bundling for the browser with Browserify/Webpack.
-	__webpack_require__(161);
+	__webpack_require__(159);
 	
-	// Re-export `IntlMessageFormat` as the CommonJS default exports with all the
+	// Re-export `IntlRelativeFormat` as the CommonJS default exports with all the
 	// locale data registered, and with English set as the default locale. Define
 	// the `default` prop for use with other compiled ES6 Modules.
-	exports = module.exports = IntlMessageFormat;
+	exports = module.exports = IntlRelativeFormat;
 	exports['default'] = exports;
 
 
@@ -12886,6 +12886,59 @@
 /* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2015 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	
+	function classNames () {
+		'use strict';
+	
+		var classes = '';
+	
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+	
+			var argType = typeof arg;
+	
+			if ('string' === argType || 'number' === argType) {
+				classes += ' ' + arg;
+	
+			} else if (Array.isArray(arg)) {
+				classes += ' ' + classNames.apply(null, arg);
+	
+			} else if ('object' === argType) {
+				for (var key in arg) {
+					if (arg.hasOwnProperty(key) && arg[key]) {
+						classes += ' ' + key;
+					}
+				}
+			}
+		}
+	
+		return classes.substr(1);
+	}
+	
+	// safely export classNames for node / browserify
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	}
+	
+	/* global define */
+	// safely export classNames for RequireJS
+	if (true) {
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+			return classNames;
+		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}
+
+
+/***/ },
+/* 151 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// shim for using process in browser
 	
 	var process = module.exports = {};
@@ -12976,59 +13029,6 @@
 	    throw new Error('process.chdir is not supported');
 	};
 	process.umask = function() { return 0; };
-
-
-/***/ },
-/* 151 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2015 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	
-	function classNames () {
-		'use strict';
-	
-		var classes = '';
-	
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-	
-			var argType = typeof arg;
-	
-			if ('string' === argType || 'number' === argType) {
-				classes += ' ' + arg;
-	
-			} else if (Array.isArray(arg)) {
-				classes += ' ' + classNames.apply(null, arg);
-	
-			} else if ('object' === argType) {
-				for (var key in arg) {
-					if (arg.hasOwnProperty(key) && arg[key]) {
-						classes += ' ' + key;
-					}
-				}
-			}
-		}
-	
-		return classes.substr(1);
-	}
-	
-	// safely export classNames for node / browserify
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = classNames;
-	}
-	
-	/* global define */
-	// safely export classNames for RequireJS
-	if (true) {
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
-			return classNames;
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}
 
 
 /***/ },
@@ -13187,7 +13187,7 @@
 	
 	module.exports = invariant;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(150)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
 
 /***/ },
 /* 155 */
@@ -13301,7 +13301,7 @@
 	
 	module.exports = warning;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(150)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
 
 /***/ },
 /* 157 */
@@ -13551,7 +13551,7 @@
 	/* jslint esnext: true */
 	
 	"use strict";
-	var intl$messageformat$$ = __webpack_require__(146), src$diff$$ = __webpack_require__(173), src$es5$$ = __webpack_require__(174);
+	var intl$messageformat$$ = __webpack_require__(145), src$diff$$ = __webpack_require__(173), src$es5$$ = __webpack_require__(174);
 	exports["default"] = RelativeFormat;
 	
 	// -----------------------------------------------------------------------------
