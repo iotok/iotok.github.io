@@ -96,7 +96,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(94);
-	module.exports = __webpack_require__(11);
+	module.exports = __webpack_require__(5);
 
 
 /***/ },
@@ -156,12 +156,12 @@
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(6);
 	__webpack_require__(7);
 	__webpack_require__(8);
-	__webpack_require__(5);
 	__webpack_require__(9);
+	__webpack_require__(6);
 	__webpack_require__(10);
+	__webpack_require__(11);
 
 /***/ },
 /* 3 */
@@ -198,6 +198,168 @@
 
 /***/ },
 /* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM */var localesSupported = [
+	  // 'en',
+	  // 'zh',
+	  // 'ja'
+	];
+	
+	var koData = {
+	  locales: ['ko-KR'],
+	  messages: {
+	    address: '주소',
+	    telephone: '전화번호',
+	    contacts: '연락처',
+	    menu: {
+	      home: '아이오톡',
+	      about: '위치'
+	    },
+	    iotok: {
+	      map: '약도',
+	      copyright: '© IOTOK Inc. All rights reserved.',
+	      address: '서울특별시 서초구 반포대로14길 71, 730호 (서초동, 엘지서초에클라트) 우편번호 06651(137-727)',
+	      phone: '070-4228-1711',
+	    }
+	  }
+	};
+	
+	var enData = {
+	  locales: ['en-US'],
+	  messages: {
+	    address: 'Address',
+	    contacts: 'Contacts',
+	    email: 'E-mail',
+	    learMore: 'Learn more',
+	    office: 'Office',
+	    partnership: 'Partnership',
+	    sales: 'Sales',
+	    support: 'Support',
+	    telephone: 'Telephone',
+	    menu: {
+	      home: 'IOTOK',
+	      about: 'Location'
+	    },
+	    iotok: {
+	      map: 'Location',
+	      copyright: '© IOTOK Inc. All rights reserved.',
+	      address: 'LG Seocho Eclat #730, 71, Banpo-daero 14-gil, Seocho-gu, Seoul 137-727 Rep. of KOREA',
+	      addressHtml:
+	        '<address>'+
+	        '  <strong>IOTOK Inc.</strong><br>'+
+	        '  LG Seocho Eclat #730<br>'+
+	        '  71, Banpo-daero 14-gil,<br>'+
+	        '  Seocho-gu, Seoul<br>'+
+	        '  137-727 Rep. of KOREA'+
+	        '</address>',
+	      phone: '+82-70-4228-1711',
+	      email: {
+	        partnership: 'biz@iotok.kr',
+	        sales: 'sales@iotok.kr',
+	        support: 'support@iotok.kr',
+	      }
+	    }
+	  }
+	};
+	
+	var intlReady = __webpack_require__(14);
+	
+	intlReady(function () {
+	  var React = __webpack_require__(13);
+	
+	  var $__0=   __webpack_require__(20),IntlMixin=$__0.IntlMixin,FormattedMessage=$__0.FormattedMessage;
+	
+	  var Router = __webpack_require__(23);
+	  var $__1=       __webpack_require__(23),DefaultRoute=$__1.DefaultRoute,NotFoundRoute=$__1.NotFoundRoute,Route=$__1.Route,Link=$__1.Link,Redirect=$__1.Redirect,RouteHandler=$__1.RouteHandler;
+	
+	  var $__2=   __webpack_require__(22),Navbar=$__2.Navbar,Nav=$__2.Nav;
+	  var $__3=  __webpack_require__(21),NavItemLink=$__3.NavItemLink;
+	
+	  var NotFound = React.createClass({displayName: "NotFound",
+	    render: function () {
+	      return (
+	        React.createElement("p", null, "Page not found.")
+	      );
+	    }
+	  });
+	
+	  var Home = __webpack_require__(15);
+	  var Contacts = __webpack_require__(16);
+	  var About = __webpack_require__(17);
+	
+	  __webpack_require__(18);
+	
+	  var App = React.createClass({displayName: "App",
+	    mixins: [IntlMixin],
+	
+	    render: function () {
+	      var iotokLogo =
+	        React.createElement("a", {className: "logo", href: "/"}, 
+	          React.createElement("span", {className: "iotok-glyph flaticon-smartphone19"}), 
+	          React.createElement("span", {className: "iotok-glyph flaticon-gps27"}), 
+	          React.createElement("span", {className: "iotok-glyph flaticon-square181"}), 
+	          React.createElement("span", {className: "iotok-glyph flaticon-wifi83"}), 
+	          React.createElement("span", {className: "iotok-glyph flaticon-videocall"})
+	        );
+	
+	      return (
+	        React.createElement("div", null, 
+	          /*<header className="header">*/
+	            React.createElement(Navbar, {brand: iotokLogo}, 
+	              React.createElement(Nav, {right: true}, 
+	                React.createElement(NavItemLink, {eventKey: 1, to: "home"}, 
+	                  React.createElement(FormattedMessage, {message: this.getIntlMessage('menu.home')})
+	                ), 
+	                React.createElement(NavItemLink, {eventKey: 2, to: "contacts"}, 
+	                  React.createElement(FormattedMessage, {message: this.getIntlMessage('contacts')})
+	                ), 
+	                React.createElement(NavItemLink, {eventKey: 3, to: "about"}, 
+	                  React.createElement(FormattedMessage, {message: this.getIntlMessage('menu.about')})
+	                )
+	              )
+	            ), 
+	          /*</header>*/
+	
+	          /* this is the important part */
+	          React.createElement("div", null, 
+	            React.createElement(RouteHandler, null)
+	          ), 
+	
+	          React.createElement("div", {className: "footer"}, 
+	            React.createElement("div", {className: "container"}, 
+	              React.createElement("p", {className: "text-center"}, 
+	                React.createElement(FormattedMessage, {message: this.getIntlMessage('iotok.address')})
+	              ), 
+	              React.createElement("p", {className: "text-center"}, 
+	                React.createElement(FormattedMessage, {message: this.getIntlMessage('iotok.copyright')})
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  });
+	
+	  var routes = (
+	    React.createElement(Route, {name: "app", path: "/", handler: App}, 
+	      React.createElement(Route, {name: "home", path: "/", handler: Home}), 
+	      React.createElement(Route, {name: "contacts", path: "contacts", handler: Contacts}), 
+	      React.createElement(Route, {name: "about", path: "about", handler: About}), 
+	      React.createElement(DefaultRoute, {handler: Home}), 
+	      React.createElement(NotFoundRoute, {handler: NotFound}), 
+	      React.createElement(Redirect, {from: "company", to: "about"})
+	    )
+	  );
+	
+	  Router.run(routes, Router.HistoryLocation, function (Handler) {
+	    React.render(React.createElement(Handler, React.__spread({},  enData)), document.body);
+	  });
+	});
+
+
+/***/ },
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* ========================================================================
@@ -679,7 +841,7 @@
 
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* ========================================================================
@@ -744,7 +906,7 @@
 
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* ========================================================================
@@ -866,7 +1028,7 @@
 
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* ========================================================================
@@ -1109,7 +1271,7 @@
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* ========================================================================
@@ -1287,7 +1449,7 @@
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* ========================================================================
@@ -1452,168 +1614,6 @@
 	  })
 	
 	}(jQuery);
-
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/** @jsx React.DOM */var localesSupported = [
-	  // 'en',
-	  // 'zh',
-	  // 'ja'
-	];
-	
-	var koData = {
-	  locales: ['ko-KR'],
-	  messages: {
-	    address: '주소',
-	    telephone: '전화번호',
-	    contacts: '연락처',
-	    menu: {
-	      home: '아이오톡',
-	      about: '위치'
-	    },
-	    iotok: {
-	      map: '약도',
-	      copyright: '© IOTOK Inc. All rights reserved.',
-	      address: '서울특별시 서초구 반포대로14길 71, 730호 (서초동, 엘지서초에클라트) 우편번호 06651(137-727)',
-	      phone: '070-4228-1711',
-	    }
-	  }
-	};
-	
-	var enData = {
-	  locales: ['en-US'],
-	  messages: {
-	    address: 'Address',
-	    contacts: 'Contacts',
-	    email: 'E-mail',
-	    learMore: 'Learn more',
-	    office: 'Office',
-	    partnership: 'Partnership',
-	    sales: 'Sales',
-	    support: 'Support',
-	    telephone: 'Telephone',
-	    menu: {
-	      home: 'IOTOK',
-	      about: 'Location'
-	    },
-	    iotok: {
-	      map: 'Location',
-	      copyright: '© IOTOK Inc. All rights reserved.',
-	      address: 'LG Seocho Eclat #730, 71, Banpo-daero 14-gil, Seocho-gu, Seoul 137-727 Rep. of KOREA',
-	      addressHtml:
-	        '<address>'+
-	        '  <strong>IOTOK Inc.</strong><br>'+
-	        '  LG Seocho Eclat #730<br>'+
-	        '  71, Banpo-daero 14-gil,<br>'+
-	        '  Seocho-gu, Seoul<br>'+
-	        '  137-727 Rep. of KOREA'+
-	        '</address>',
-	      phone: '+82-70-4228-1711',
-	      email: {
-	        partnership: 'biz@iotok.kr',
-	        sales: 'sales@iotok.kr',
-	        support: 'support@iotok.kr',
-	      }
-	    }
-	  }
-	};
-	
-	var intlReady = __webpack_require__(14);
-	
-	intlReady(function () {
-	  var React = __webpack_require__(13);
-	
-	  var $__0=   __webpack_require__(20),IntlMixin=$__0.IntlMixin,FormattedMessage=$__0.FormattedMessage;
-	
-	  var Router = __webpack_require__(23);
-	  var $__1=       __webpack_require__(23),DefaultRoute=$__1.DefaultRoute,NotFoundRoute=$__1.NotFoundRoute,Route=$__1.Route,Link=$__1.Link,Redirect=$__1.Redirect,RouteHandler=$__1.RouteHandler;
-	
-	  var $__2=   __webpack_require__(21),Navbar=$__2.Navbar,Nav=$__2.Nav;
-	  var $__3=  __webpack_require__(22),NavItemLink=$__3.NavItemLink;
-	
-	  var NotFound = React.createClass({displayName: "NotFound",
-	    render: function () {
-	      return (
-	        React.createElement("p", null, "Page not found.")
-	      );
-	    }
-	  });
-	
-	  var Home = __webpack_require__(15);
-	  var Contacts = __webpack_require__(16);
-	  var About = __webpack_require__(17);
-	
-	  __webpack_require__(18);
-	
-	  var App = React.createClass({displayName: "App",
-	    mixins: [IntlMixin],
-	
-	    render: function () {
-	      var iotokLogo =
-	        React.createElement("a", {className: "logo", href: "/"}, 
-	          React.createElement("span", {className: "iotok-glyph flaticon-smartphone19"}), 
-	          React.createElement("span", {className: "iotok-glyph flaticon-gps27"}), 
-	          React.createElement("span", {className: "iotok-glyph flaticon-square181"}), 
-	          React.createElement("span", {className: "iotok-glyph flaticon-wifi83"}), 
-	          React.createElement("span", {className: "iotok-glyph flaticon-videocall"})
-	        );
-	
-	      return (
-	        React.createElement("div", null, 
-	          /*<header className="header">*/
-	            React.createElement(Navbar, {brand: iotokLogo}, 
-	              React.createElement(Nav, {right: true}, 
-	                React.createElement(NavItemLink, {eventKey: 1, to: "home"}, 
-	                  React.createElement(FormattedMessage, {message: this.getIntlMessage('menu.home')})
-	                ), 
-	                React.createElement(NavItemLink, {eventKey: 2, to: "contacts"}, 
-	                  React.createElement(FormattedMessage, {message: this.getIntlMessage('contacts')})
-	                ), 
-	                React.createElement(NavItemLink, {eventKey: 3, to: "about"}, 
-	                  React.createElement(FormattedMessage, {message: this.getIntlMessage('menu.about')})
-	                )
-	              )
-	            ), 
-	          /*</header>*/
-	
-	          /* this is the important part */
-	          React.createElement("div", null, 
-	            React.createElement(RouteHandler, null)
-	          ), 
-	
-	          React.createElement("div", {className: "footer"}, 
-	            React.createElement("div", {className: "container"}, 
-	              React.createElement("p", {className: "text-center"}, 
-	                React.createElement(FormattedMessage, {message: this.getIntlMessage('iotok.address')})
-	              ), 
-	              React.createElement("p", {className: "text-center"}, 
-	                React.createElement(FormattedMessage, {message: this.getIntlMessage('iotok.copyright')})
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  });
-	
-	  var routes = (
-	    React.createElement(Route, {name: "app", path: "/", handler: App}, 
-	      React.createElement(Route, {name: "home", path: "/", handler: Home}), 
-	      React.createElement(Route, {name: "contacts", path: "contacts", handler: Contacts}), 
-	      React.createElement(Route, {name: "about", path: "about", handler: About}), 
-	      React.createElement(DefaultRoute, {handler: Home}), 
-	      React.createElement(NotFoundRoute, {handler: NotFound}), 
-	      React.createElement(Redirect, {from: "company", to: "about"})
-	    )
-	  );
-	
-	  Router.run(routes, Router.HistoryLocation, function (Handler) {
-	    React.render(React.createElement(Handler, React.__spread({},  enData)), document.body);
-	  });
-	});
 
 
 /***/ },
@@ -1879,7 +1879,7 @@
 	
 	var $__0=   __webpack_require__(20),IntlMixin=$__0.IntlMixin,FormattedMessage=$__0.FormattedMessage;
 	
-	var $__1=     __webpack_require__(21),Button=$__1.Button,Carousel=$__1.Carousel,CarouselItem=$__1.CarouselItem,Jumbotron=$__1.Jumbotron;
+	var $__1=     __webpack_require__(22),Button=$__1.Button,Carousel=$__1.Carousel,CarouselItem=$__1.CarouselItem,Jumbotron=$__1.Jumbotron;
 	
 	// <Carousel>
 	//   <CarouselItem>
@@ -1926,7 +1926,7 @@
 	
 	var $__0=   __webpack_require__(20),IntlMixin=$__0.IntlMixin,FormattedMessage=$__0.FormattedMessage;
 	
-	var $__1=   __webpack_require__(21),Panel=$__1.Panel,Table=$__1.Table;
+	var $__1=   __webpack_require__(22),Panel=$__1.Panel,Table=$__1.Table;
 	
 	module.exports = React.createClass({displayName: "module.exports",
 	  mixins: [IntlMixin],
@@ -1978,7 +1978,7 @@
 	
 	var $__0=    __webpack_require__(20),IntlMixin=$__0.IntlMixin,FormattedMessage=$__0.FormattedMessage,FormattedHTMLMessage=$__0.FormattedHTMLMessage;
 	
-	var $__1=  __webpack_require__(21),Panel=$__1.Panel;
+	var $__1=  __webpack_require__(22),Panel=$__1.Panel;
 	
 	module.exports = React.createClass({displayName: "module.exports",
 	  mixins: [IntlMixin],
@@ -2077,6 +2077,27 @@
 
 /***/ },
 /* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var ButtonLink = __webpack_require__(33);
+	var ListGroupItemLink = __webpack_require__(34);
+	var MenuItemLink = __webpack_require__(35);
+	var NavItemLink = __webpack_require__(32);
+	var RouterModalTrigger = __webpack_require__(36);
+	var RouterOverlayTrigger = __webpack_require__(37);
+	
+	module.exports = {
+	  ButtonLink: ButtonLink,
+	  ListGroupItemLink: ListGroupItemLink,
+	  MenuItemLink: MenuItemLink,
+	  NavItemLink: NavItemLink,
+	  RouterModalTrigger: RouterModalTrigger,
+	  RouterOverlayTrigger: RouterOverlayTrigger
+	};
+
+
+/***/ },
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2362,27 +2383,6 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var ButtonLink = __webpack_require__(33);
-	var ListGroupItemLink = __webpack_require__(34);
-	var MenuItemLink = __webpack_require__(35);
-	var NavItemLink = __webpack_require__(32);
-	var RouterModalTrigger = __webpack_require__(36);
-	var RouterOverlayTrigger = __webpack_require__(37);
-	
-	module.exports = {
-	  ButtonLink: ButtonLink,
-	  ListGroupItemLink: ListGroupItemLink,
-	  MenuItemLink: MenuItemLink,
-	  NavItemLink: NavItemLink,
-	  RouterModalTrigger: RouterModalTrigger,
-	  RouterOverlayTrigger: RouterOverlayTrigger
-	};
-
-
-/***/ },
 /* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2488,7 +2488,7 @@
 	
 	"use strict";
 	exports.__addLocaleData = __addLocaleData;
-	var intl$messageformat$$ = __webpack_require__(146), intl$relativeformat$$ = __webpack_require__(145), src$en$$ = __webpack_require__(114), src$mixin$$ = __webpack_require__(115), src$components$date$$ = __webpack_require__(116), src$components$time$$ = __webpack_require__(113), src$components$relative$$ = __webpack_require__(117), src$components$number$$ = __webpack_require__(118), src$components$message$$ = __webpack_require__(119), src$components$html$message$$ = __webpack_require__(120);
+	var intl$messageformat$$ = __webpack_require__(145), intl$relativeformat$$ = __webpack_require__(146), src$en$$ = __webpack_require__(114), src$mixin$$ = __webpack_require__(115), src$components$date$$ = __webpack_require__(116), src$components$time$$ = __webpack_require__(113), src$components$relative$$ = __webpack_require__(117), src$components$number$$ = __webpack_require__(118), src$components$message$$ = __webpack_require__(119), src$components$html$message$$ = __webpack_require__(120);
 	function __addLocaleData(data) {
 	    intl$messageformat$$["default"].__addLocaleData(data);
 	    intl$relativeformat$$["default"].__addLocaleData(data);
@@ -2661,7 +2661,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(13);
-	var classSet = __webpack_require__(148);
+	var classSet = __webpack_require__(150);
 	
 	var MenuItem = __webpack_require__(67);
 	var LinkMixin = __webpack_require__(121);
@@ -2755,7 +2755,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -2903,7 +2903,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3109,7 +3109,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3254,7 +3254,7 @@
 	
 	var _utilsValidComponentChildren2 = _interopRequireDefault(_utilsValidComponentChildren);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3304,7 +3304,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3415,7 +3415,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3585,7 +3585,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3681,7 +3681,7 @@
 	
 	var _CollapsibleMixin2 = _interopRequireDefault(_CollapsibleMixin);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3823,7 +3823,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4121,7 +4121,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4238,7 +4238,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4579,7 +4579,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4737,7 +4737,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4999,7 +4999,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5060,7 +5060,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5281,7 +5281,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5318,7 +5318,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5374,7 +5374,7 @@
 	
 	var _BootstrapMixin2 = _interopRequireDefault(_BootstrapMixin);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5489,7 +5489,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5573,7 +5573,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5779,7 +5779,7 @@
 	
 	var _CollapsibleMixin2 = _interopRequireDefault(_CollapsibleMixin);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5926,7 +5926,7 @@
 	
 	var _BootstrapMixin2 = _interopRequireDefault(_BootstrapMixin);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -6098,7 +6098,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -6727,7 +6727,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -6768,7 +6768,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7012,7 +7012,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7122,7 +7122,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7202,7 +7202,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7261,7 +7261,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7365,7 +7365,7 @@
 	
 	var _BootstrapMixin2 = _interopRequireDefault(_BootstrapMixin);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7512,7 +7512,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7563,7 +7563,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7716,7 +7716,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8051,7 +8051,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8109,7 +8109,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8220,7 +8220,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8294,7 +8294,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8379,7 +8379,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -10374,7 +10374,7 @@
 	}
 	
 	module.exports = createRouter;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
 
 /***/ },
 /* 111 */
@@ -10497,7 +10497,7 @@
 	
 	// TODO: Use `import React from "react";` when external modules are supported.
 	"use strict";
-	var src$react$$ = __webpack_require__(147), intl$messageformat$$ = __webpack_require__(146), intl$relativeformat$$ = __webpack_require__(145), intl$format$cache$$ = __webpack_require__(157);
+	var src$react$$ = __webpack_require__(147), intl$messageformat$$ = __webpack_require__(145), intl$relativeformat$$ = __webpack_require__(146), intl$format$cache$$ = __webpack_require__(157);
 	
 	// -----------------------------------------------------------------------------
 	
@@ -10881,7 +10881,7 @@
 	
 	// TODO: Use `import React from "react";` when external modules are supported.
 	"use strict";
-	var src$react$$ = __webpack_require__(147), src$escape$$ = __webpack_require__(149), src$mixin$$ = __webpack_require__(115);
+	var src$react$$ = __webpack_require__(147), src$escape$$ = __webpack_require__(148), src$mixin$$ = __webpack_require__(115);
 	
 	var FormattedHTMLMessage = src$react$$["default"].createClass({
 	    displayName: 'FormattedHTMLMessage',
@@ -10944,7 +10944,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(13);
-	var classSet = __webpack_require__(148);
+	var classSet = __webpack_require__(150);
 	
 	function isLeftClickEvent(event) {
 	  return event.button === 0;
@@ -11443,7 +11443,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -11527,7 +11527,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(151);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -11802,7 +11802,7 @@
 	}
 	
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
 
 /***/ },
 /* 129 */
@@ -12278,8 +12278,8 @@
 	'use strict';
 	
 	var invariant = __webpack_require__(154);
-	var assign = __webpack_require__(163);
-	var qs = __webpack_require__(164);
+	var assign = __webpack_require__(164);
+	var qs = __webpack_require__(163);
 	
 	var paramCompileMatcher = /:([a-zA-Z_$][a-zA-Z0-9_$]*)|[*.()\[\]\\+|{}^$]/g;
 	var paramInjectMatcher = /:([a-zA-Z_$][a-zA-Z0-9_$?]*[?]?)|[*]/g;
@@ -12747,16 +12747,16 @@
 	
 	'use strict';
 	
-	var IntlRelativeFormat = __webpack_require__(160)['default'];
+	var IntlMessageFormat = __webpack_require__(160)['default'];
 	
-	// Add all locale data to `IntlRelativeFormat`. This module will be ignored when
+	// Add all locale data to `IntlMessageFormat`. This module will be ignored when
 	// bundling for the browser with Browserify/Webpack.
 	__webpack_require__(159);
 	
-	// Re-export `IntlRelativeFormat` as the CommonJS default exports with all the
+	// Re-export `IntlMessageFormat` as the CommonJS default exports with all the
 	// locale data registered, and with English set as the default locale. Define
 	// the `default` prop for use with other compiled ES6 Modules.
-	exports = module.exports = IntlRelativeFormat;
+	exports = module.exports = IntlMessageFormat;
 	exports['default'] = exports;
 
 
@@ -12768,16 +12768,16 @@
 	
 	'use strict';
 	
-	var IntlMessageFormat = __webpack_require__(162)['default'];
+	var IntlRelativeFormat = __webpack_require__(162)['default'];
 	
-	// Add all locale data to `IntlMessageFormat`. This module will be ignored when
+	// Add all locale data to `IntlRelativeFormat`. This module will be ignored when
 	// bundling for the browser with Browserify/Webpack.
 	__webpack_require__(161);
 	
-	// Re-export `IntlMessageFormat` as the CommonJS default exports with all the
+	// Re-export `IntlRelativeFormat` as the CommonJS default exports with all the
 	// locale data registered, and with English set as the default locale. Define
 	// the `default` prop for use with other compiled ES6 Modules.
-	exports = module.exports = IntlMessageFormat;
+	exports = module.exports = IntlRelativeFormat;
 	exports['default'] = exports;
 
 
@@ -12798,59 +12798,6 @@
 
 /***/ },
 /* 148 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2015 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	
-	function classNames () {
-		'use strict';
-	
-		var classes = '';
-	
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-	
-			var argType = typeof arg;
-	
-			if ('string' === argType || 'number' === argType) {
-				classes += ' ' + arg;
-	
-			} else if (Array.isArray(arg)) {
-				classes += ' ' + classNames.apply(null, arg);
-	
-			} else if ('object' === argType) {
-				for (var key in arg) {
-					if (arg.hasOwnProperty(key) && arg[key]) {
-						classes += ' ' + key;
-					}
-				}
-			}
-		}
-	
-		return classes.substr(1);
-	}
-	
-	// safely export classNames for node / browserify
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = classNames;
-	}
-	
-	/* global define */
-	// safely export classNames for RequireJS
-	if (true) {
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
-			return classNames;
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}
-
-
-/***/ },
-/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* jshint esnext:true */
@@ -12885,60 +12832,7 @@
 	//# sourceMappingURL=escape.js.map
 
 /***/ },
-/* 150 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2015 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	
-	function classNames () {
-		'use strict';
-	
-		var classes = '';
-	
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-	
-			var argType = typeof arg;
-	
-			if ('string' === argType || 'number' === argType) {
-				classes += ' ' + arg;
-	
-			} else if (Array.isArray(arg)) {
-				classes += ' ' + classNames.apply(null, arg);
-	
-			} else if ('object' === argType) {
-				for (var key in arg) {
-					if (arg.hasOwnProperty(key) && arg[key]) {
-						classes += ' ' + key;
-					}
-				}
-			}
-		}
-	
-		return classes.substr(1);
-	}
-	
-	// safely export classNames for node / browserify
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = classNames;
-	}
-	
-	/* global define */
-	// safely export classNames for RequireJS
-	if (true) {
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
-			return classNames;
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}
-
-
-/***/ },
-/* 151 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// shim for using process in browser
@@ -13031,6 +12925,112 @@
 	    throw new Error('process.chdir is not supported');
 	};
 	process.umask = function() { return 0; };
+
+
+/***/ },
+/* 150 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2015 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	
+	function classNames () {
+		'use strict';
+	
+		var classes = '';
+	
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+	
+			var argType = typeof arg;
+	
+			if ('string' === argType || 'number' === argType) {
+				classes += ' ' + arg;
+	
+			} else if (Array.isArray(arg)) {
+				classes += ' ' + classNames.apply(null, arg);
+	
+			} else if ('object' === argType) {
+				for (var key in arg) {
+					if (arg.hasOwnProperty(key) && arg[key]) {
+						classes += ' ' + key;
+					}
+				}
+			}
+		}
+	
+		return classes.substr(1);
+	}
+	
+	// safely export classNames for node / browserify
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	}
+	
+	/* global define */
+	// safely export classNames for RequireJS
+	if (true) {
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+			return classNames;
+		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}
+
+
+/***/ },
+/* 151 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2015 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	
+	function classNames () {
+		'use strict';
+	
+		var classes = '';
+	
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+	
+			var argType = typeof arg;
+	
+			if ('string' === argType || 'number' === argType) {
+				classes += ' ' + arg;
+	
+			} else if (Array.isArray(arg)) {
+				classes += ' ' + classNames.apply(null, arg);
+	
+			} else if ('object' === argType) {
+				for (var key in arg) {
+					if (arg.hasOwnProperty(key) && arg[key]) {
+						classes += ' ' + key;
+					}
+				}
+			}
+		}
+	
+		return classes.substr(1);
+	}
+	
+	// safely export classNames for node / browserify
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	}
+	
+	/* global define */
+	// safely export classNames for RequireJS
+	if (true) {
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+			return classNames;
+		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}
 
 
 /***/ },
@@ -13189,7 +13189,7 @@
 	
 	module.exports = invariant;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
 
 /***/ },
 /* 155 */
@@ -13303,7 +13303,7 @@
 	
 	module.exports = warning;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
 
 /***/ },
 /* 157 */
@@ -13386,6 +13386,13 @@
 /* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__(171);
+
+
+/***/ },
+/* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
 	function ToObject(val) {
@@ -13412,13 +13419,6 @@
 	
 		return to;
 	};
-
-
-/***/ },
-/* 164 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(171);
 
 
 /***/ },
@@ -13553,7 +13553,286 @@
 	/* jslint esnext: true */
 	
 	"use strict";
-	var intl$messageformat$$ = __webpack_require__(146), src$diff$$ = __webpack_require__(173), src$es5$$ = __webpack_require__(174);
+	var src$utils$$ = __webpack_require__(173), src$es5$$ = __webpack_require__(174), src$compiler$$ = __webpack_require__(175), intl$messageformat$parser$$ = __webpack_require__(180);
+	exports["default"] = MessageFormat;
+	
+	// -- MessageFormat --------------------------------------------------------
+	
+	function MessageFormat(message, locales, formats) {
+	    // Parse string messages into an AST.
+	    var ast = typeof message === 'string' ?
+	            MessageFormat.__parse(message) : message;
+	
+	    if (!(ast && ast.type === 'messageFormatPattern')) {
+	        throw new TypeError('A message must be provided as a String or AST.');
+	    }
+	
+	    // Creates a new object with the specified `formats` merged with the default
+	    // formats.
+	    formats = this._mergeFormats(MessageFormat.formats, formats);
+	
+	    // Defined first because it's used to build the format pattern.
+	    src$es5$$.defineProperty(this, '_locale',  {value: this._resolveLocale(locales)});
+	
+	    // Compile the `ast` to a pattern that is highly optimized for repeated
+	    // `format()` invocations. **Note:** This passes the `locales` set provided
+	    // to the constructor instead of just the resolved locale.
+	    var pluralFn = this._findPluralRuleFunction(this._locale);
+	    var pattern  = this._compilePattern(ast, locales, formats, pluralFn);
+	
+	    // "Bind" `format()` method to `this` so it can be passed by reference like
+	    // the other `Intl` APIs.
+	    var messageFormat = this;
+	    this.format = function (values) {
+	        return messageFormat._format(pattern, values);
+	    };
+	}
+	
+	// Default format options used as the prototype of the `formats` provided to the
+	// constructor. These are used when constructing the internal Intl.NumberFormat
+	// and Intl.DateTimeFormat instances.
+	src$es5$$.defineProperty(MessageFormat, 'formats', {
+	    enumerable: true,
+	
+	    value: {
+	        number: {
+	            'currency': {
+	                style: 'currency'
+	            },
+	
+	            'percent': {
+	                style: 'percent'
+	            }
+	        },
+	
+	        date: {
+	            'short': {
+	                month: 'numeric',
+	                day  : 'numeric',
+	                year : '2-digit'
+	            },
+	
+	            'medium': {
+	                month: 'short',
+	                day  : 'numeric',
+	                year : 'numeric'
+	            },
+	
+	            'long': {
+	                month: 'long',
+	                day  : 'numeric',
+	                year : 'numeric'
+	            },
+	
+	            'full': {
+	                weekday: 'long',
+	                month  : 'long',
+	                day    : 'numeric',
+	                year   : 'numeric'
+	            }
+	        },
+	
+	        time: {
+	            'short': {
+	                hour  : 'numeric',
+	                minute: 'numeric'
+	            },
+	
+	            'medium':  {
+	                hour  : 'numeric',
+	                minute: 'numeric',
+	                second: 'numeric'
+	            },
+	
+	            'long': {
+	                hour        : 'numeric',
+	                minute      : 'numeric',
+	                second      : 'numeric',
+	                timeZoneName: 'short'
+	            },
+	
+	            'full': {
+	                hour        : 'numeric',
+	                minute      : 'numeric',
+	                second      : 'numeric',
+	                timeZoneName: 'short'
+	            }
+	        }
+	    }
+	});
+	
+	// Define internal private properties for dealing with locale data.
+	src$es5$$.defineProperty(MessageFormat, '__localeData__', {value: src$es5$$.objCreate(null)});
+	src$es5$$.defineProperty(MessageFormat, '__addLocaleData', {value: function (data) {
+	    if (!(data && data.locale)) {
+	        throw new Error(
+	            'Locale data provided to IntlMessageFormat is missing a ' +
+	            '`locale` property'
+	        );
+	    }
+	
+	    MessageFormat.__localeData__[data.locale.toLowerCase()] = data;
+	}});
+	
+	// Defines `__parse()` static method as an exposed private.
+	src$es5$$.defineProperty(MessageFormat, '__parse', {value: intl$messageformat$parser$$["default"].parse});
+	
+	// Define public `defaultLocale` property which defaults to English, but can be
+	// set by the developer.
+	src$es5$$.defineProperty(MessageFormat, 'defaultLocale', {
+	    enumerable: true,
+	    writable  : true,
+	    value     : undefined
+	});
+	
+	MessageFormat.prototype.resolvedOptions = function () {
+	    // TODO: Provide anything else?
+	    return {
+	        locale: this._locale
+	    };
+	};
+	
+	MessageFormat.prototype._compilePattern = function (ast, locales, formats, pluralFn) {
+	    var compiler = new src$compiler$$["default"](locales, formats, pluralFn);
+	    return compiler.compile(ast);
+	};
+	
+	MessageFormat.prototype._findPluralRuleFunction = function (locale) {
+	    var localeData = MessageFormat.__localeData__;
+	    var data       = localeData[locale.toLowerCase()];
+	
+	    // The locale data is de-duplicated, so we have to traverse the locale's
+	    // hierarchy until we find a `pluralRuleFunction` to return.
+	    while (data) {
+	        if (data.pluralRuleFunction) {
+	            return data.pluralRuleFunction;
+	        }
+	
+	        data = data.parentLocale && localeData[data.parentLocale.toLowerCase()];
+	    }
+	
+	    throw new Error(
+	        'Locale data added to IntlMessageFormat is missing a ' +
+	        '`pluralRuleFunction` for :' + locale
+	    );
+	};
+	
+	MessageFormat.prototype._format = function (pattern, values) {
+	    var result = '',
+	        i, len, part, id, value;
+	
+	    for (i = 0, len = pattern.length; i < len; i += 1) {
+	        part = pattern[i];
+	
+	        // Exist early for string parts.
+	        if (typeof part === 'string') {
+	            result += part;
+	            continue;
+	        }
+	
+	        id = part.id;
+	
+	        // Enforce that all required values are provided by the caller.
+	        if (!(values && src$utils$$.hop.call(values, id))) {
+	            throw new Error('A value must be provided for: ' + id);
+	        }
+	
+	        value = values[id];
+	
+	        // Recursively format plural and select parts' option — which can be a
+	        // nested pattern structure. The choosing of the option to use is
+	        // abstracted-by and delegated-to the part helper object.
+	        if (part.options) {
+	            result += this._format(part.getOption(value), values);
+	        } else {
+	            result += part.format(value);
+	        }
+	    }
+	
+	    return result;
+	};
+	
+	MessageFormat.prototype._mergeFormats = function (defaults, formats) {
+	    var mergedFormats = {},
+	        type, mergedType;
+	
+	    for (type in defaults) {
+	        if (!src$utils$$.hop.call(defaults, type)) { continue; }
+	
+	        mergedFormats[type] = mergedType = src$es5$$.objCreate(defaults[type]);
+	
+	        if (formats && src$utils$$.hop.call(formats, type)) {
+	            src$utils$$.extend(mergedType, formats[type]);
+	        }
+	    }
+	
+	    return mergedFormats;
+	};
+	
+	MessageFormat.prototype._resolveLocale = function (locales) {
+	    if (typeof locales === 'string') {
+	        locales = [locales];
+	    }
+	
+	    // Create a copy of the array so we can push on the default locale.
+	    locales = (locales || []).concat(MessageFormat.defaultLocale);
+	
+	    var localeData = MessageFormat.__localeData__;
+	    var i, len, localeParts, data;
+	
+	    // Using the set of locales + the default locale, we look for the first one
+	    // which that has been registered. When data does not exist for a locale, we
+	    // traverse its ancestors to find something that's been registered within
+	    // its hierarchy of locales. Since we lack the proper `parentLocale` data
+	    // here, we must take a naive approach to traversal.
+	    for (i = 0, len = locales.length; i < len; i += 1) {
+	        localeParts = locales[i].toLowerCase().split('-');
+	
+	        while (localeParts.length) {
+	            data = localeData[localeParts.join('-')];
+	            if (data) {
+	                // Return the normalized locale string; e.g., we return "en-US",
+	                // instead of "en-us".
+	                return data.locale;
+	            }
+	
+	            localeParts.pop();
+	        }
+	    }
+	
+	    var defaultLocale = locales.pop();
+	    throw new Error(
+	        'No locale data has been added to IntlMessageFormat for: ' +
+	        locales.join(', ') + ', or the default locale: ' + defaultLocale
+	    );
+	};
+	
+	//# sourceMappingURL=core.js.map
+
+/***/ },
+/* 168 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// GENERATED FILE
+	"use strict";
+	exports["default"] = {"locale":"en","pluralRuleFunction":function (n,ord){var s=String(n).split("."),v0=!s[1],t0=Number(s[0])==n,n10=t0&&s[0].slice(-1),n100=t0&&s[0].slice(-2);if(ord)return n10==1&&n100!=11?"one":n10==2&&n100!=12?"two":n10==3&&n100!=13?"few":"other";return n==1&&v0?"one":"other"}};
+	
+	//# sourceMappingURL=en.js.map
+
+/***/ },
+/* 169 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
+	Copyrights licensed under the New BSD License.
+	See the accompanying LICENSE file for terms.
+	*/
+	
+	/* jslint esnext: true */
+	
+	"use strict";
+	var intl$messageformat$$ = __webpack_require__(145), src$diff$$ = __webpack_require__(176), src$es5$$ = __webpack_require__(177);
 	exports["default"] = RelativeFormat;
 	
 	// -----------------------------------------------------------------------------
@@ -13843,291 +14122,12 @@
 	//# sourceMappingURL=core.js.map
 
 /***/ },
-/* 168 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// GENERATED FILE
-	"use strict";
-	exports["default"] = {"locale":"en","pluralRuleFunction":function (n,ord){var s=String(n).split("."),v0=!s[1],t0=Number(s[0])==n,n10=t0&&s[0].slice(-1),n100=t0&&s[0].slice(-2);if(ord)return n10==1&&n100!=11?"one":n10==2&&n100!=12?"two":n10==3&&n100!=13?"few":"other";return n==1&&v0?"one":"other"},"fields":{"year":{"displayName":"Year","relative":{"0":"this year","1":"next year","-1":"last year"},"relativeTime":{"future":{"one":"in {0} year","other":"in {0} years"},"past":{"one":"{0} year ago","other":"{0} years ago"}}},"month":{"displayName":"Month","relative":{"0":"this month","1":"next month","-1":"last month"},"relativeTime":{"future":{"one":"in {0} month","other":"in {0} months"},"past":{"one":"{0} month ago","other":"{0} months ago"}}},"day":{"displayName":"Day","relative":{"0":"today","1":"tomorrow","-1":"yesterday"},"relativeTime":{"future":{"one":"in {0} day","other":"in {0} days"},"past":{"one":"{0} day ago","other":"{0} days ago"}}},"hour":{"displayName":"Hour","relativeTime":{"future":{"one":"in {0} hour","other":"in {0} hours"},"past":{"one":"{0} hour ago","other":"{0} hours ago"}}},"minute":{"displayName":"Minute","relativeTime":{"future":{"one":"in {0} minute","other":"in {0} minutes"},"past":{"one":"{0} minute ago","other":"{0} minutes ago"}}},"second":{"displayName":"Second","relative":{"0":"now"},"relativeTime":{"future":{"one":"in {0} second","other":"in {0} seconds"},"past":{"one":"{0} second ago","other":"{0} seconds ago"}}}}};
-	
-	//# sourceMappingURL=en.js.map
-
-/***/ },
-/* 169 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
-	Copyrights licensed under the New BSD License.
-	See the accompanying LICENSE file for terms.
-	*/
-	
-	/* jslint esnext: true */
-	
-	"use strict";
-	var src$utils$$ = __webpack_require__(175), src$es5$$ = __webpack_require__(176), src$compiler$$ = __webpack_require__(177), intl$messageformat$parser$$ = __webpack_require__(180);
-	exports["default"] = MessageFormat;
-	
-	// -- MessageFormat --------------------------------------------------------
-	
-	function MessageFormat(message, locales, formats) {
-	    // Parse string messages into an AST.
-	    var ast = typeof message === 'string' ?
-	            MessageFormat.__parse(message) : message;
-	
-	    if (!(ast && ast.type === 'messageFormatPattern')) {
-	        throw new TypeError('A message must be provided as a String or AST.');
-	    }
-	
-	    // Creates a new object with the specified `formats` merged with the default
-	    // formats.
-	    formats = this._mergeFormats(MessageFormat.formats, formats);
-	
-	    // Defined first because it's used to build the format pattern.
-	    src$es5$$.defineProperty(this, '_locale',  {value: this._resolveLocale(locales)});
-	
-	    // Compile the `ast` to a pattern that is highly optimized for repeated
-	    // `format()` invocations. **Note:** This passes the `locales` set provided
-	    // to the constructor instead of just the resolved locale.
-	    var pluralFn = this._findPluralRuleFunction(this._locale);
-	    var pattern  = this._compilePattern(ast, locales, formats, pluralFn);
-	
-	    // "Bind" `format()` method to `this` so it can be passed by reference like
-	    // the other `Intl` APIs.
-	    var messageFormat = this;
-	    this.format = function (values) {
-	        return messageFormat._format(pattern, values);
-	    };
-	}
-	
-	// Default format options used as the prototype of the `formats` provided to the
-	// constructor. These are used when constructing the internal Intl.NumberFormat
-	// and Intl.DateTimeFormat instances.
-	src$es5$$.defineProperty(MessageFormat, 'formats', {
-	    enumerable: true,
-	
-	    value: {
-	        number: {
-	            'currency': {
-	                style: 'currency'
-	            },
-	
-	            'percent': {
-	                style: 'percent'
-	            }
-	        },
-	
-	        date: {
-	            'short': {
-	                month: 'numeric',
-	                day  : 'numeric',
-	                year : '2-digit'
-	            },
-	
-	            'medium': {
-	                month: 'short',
-	                day  : 'numeric',
-	                year : 'numeric'
-	            },
-	
-	            'long': {
-	                month: 'long',
-	                day  : 'numeric',
-	                year : 'numeric'
-	            },
-	
-	            'full': {
-	                weekday: 'long',
-	                month  : 'long',
-	                day    : 'numeric',
-	                year   : 'numeric'
-	            }
-	        },
-	
-	        time: {
-	            'short': {
-	                hour  : 'numeric',
-	                minute: 'numeric'
-	            },
-	
-	            'medium':  {
-	                hour  : 'numeric',
-	                minute: 'numeric',
-	                second: 'numeric'
-	            },
-	
-	            'long': {
-	                hour        : 'numeric',
-	                minute      : 'numeric',
-	                second      : 'numeric',
-	                timeZoneName: 'short'
-	            },
-	
-	            'full': {
-	                hour        : 'numeric',
-	                minute      : 'numeric',
-	                second      : 'numeric',
-	                timeZoneName: 'short'
-	            }
-	        }
-	    }
-	});
-	
-	// Define internal private properties for dealing with locale data.
-	src$es5$$.defineProperty(MessageFormat, '__localeData__', {value: src$es5$$.objCreate(null)});
-	src$es5$$.defineProperty(MessageFormat, '__addLocaleData', {value: function (data) {
-	    if (!(data && data.locale)) {
-	        throw new Error(
-	            'Locale data provided to IntlMessageFormat is missing a ' +
-	            '`locale` property'
-	        );
-	    }
-	
-	    MessageFormat.__localeData__[data.locale.toLowerCase()] = data;
-	}});
-	
-	// Defines `__parse()` static method as an exposed private.
-	src$es5$$.defineProperty(MessageFormat, '__parse', {value: intl$messageformat$parser$$["default"].parse});
-	
-	// Define public `defaultLocale` property which defaults to English, but can be
-	// set by the developer.
-	src$es5$$.defineProperty(MessageFormat, 'defaultLocale', {
-	    enumerable: true,
-	    writable  : true,
-	    value     : undefined
-	});
-	
-	MessageFormat.prototype.resolvedOptions = function () {
-	    // TODO: Provide anything else?
-	    return {
-	        locale: this._locale
-	    };
-	};
-	
-	MessageFormat.prototype._compilePattern = function (ast, locales, formats, pluralFn) {
-	    var compiler = new src$compiler$$["default"](locales, formats, pluralFn);
-	    return compiler.compile(ast);
-	};
-	
-	MessageFormat.prototype._findPluralRuleFunction = function (locale) {
-	    var localeData = MessageFormat.__localeData__;
-	    var data       = localeData[locale.toLowerCase()];
-	
-	    // The locale data is de-duplicated, so we have to traverse the locale's
-	    // hierarchy until we find a `pluralRuleFunction` to return.
-	    while (data) {
-	        if (data.pluralRuleFunction) {
-	            return data.pluralRuleFunction;
-	        }
-	
-	        data = data.parentLocale && localeData[data.parentLocale.toLowerCase()];
-	    }
-	
-	    throw new Error(
-	        'Locale data added to IntlMessageFormat is missing a ' +
-	        '`pluralRuleFunction` for :' + locale
-	    );
-	};
-	
-	MessageFormat.prototype._format = function (pattern, values) {
-	    var result = '',
-	        i, len, part, id, value;
-	
-	    for (i = 0, len = pattern.length; i < len; i += 1) {
-	        part = pattern[i];
-	
-	        // Exist early for string parts.
-	        if (typeof part === 'string') {
-	            result += part;
-	            continue;
-	        }
-	
-	        id = part.id;
-	
-	        // Enforce that all required values are provided by the caller.
-	        if (!(values && src$utils$$.hop.call(values, id))) {
-	            throw new Error('A value must be provided for: ' + id);
-	        }
-	
-	        value = values[id];
-	
-	        // Recursively format plural and select parts' option — which can be a
-	        // nested pattern structure. The choosing of the option to use is
-	        // abstracted-by and delegated-to the part helper object.
-	        if (part.options) {
-	            result += this._format(part.getOption(value), values);
-	        } else {
-	            result += part.format(value);
-	        }
-	    }
-	
-	    return result;
-	};
-	
-	MessageFormat.prototype._mergeFormats = function (defaults, formats) {
-	    var mergedFormats = {},
-	        type, mergedType;
-	
-	    for (type in defaults) {
-	        if (!src$utils$$.hop.call(defaults, type)) { continue; }
-	
-	        mergedFormats[type] = mergedType = src$es5$$.objCreate(defaults[type]);
-	
-	        if (formats && src$utils$$.hop.call(formats, type)) {
-	            src$utils$$.extend(mergedType, formats[type]);
-	        }
-	    }
-	
-	    return mergedFormats;
-	};
-	
-	MessageFormat.prototype._resolveLocale = function (locales) {
-	    if (typeof locales === 'string') {
-	        locales = [locales];
-	    }
-	
-	    // Create a copy of the array so we can push on the default locale.
-	    locales = (locales || []).concat(MessageFormat.defaultLocale);
-	
-	    var localeData = MessageFormat.__localeData__;
-	    var i, len, localeParts, data;
-	
-	    // Using the set of locales + the default locale, we look for the first one
-	    // which that has been registered. When data does not exist for a locale, we
-	    // traverse its ancestors to find something that's been registered within
-	    // its hierarchy of locales. Since we lack the proper `parentLocale` data
-	    // here, we must take a naive approach to traversal.
-	    for (i = 0, len = locales.length; i < len; i += 1) {
-	        localeParts = locales[i].toLowerCase().split('-');
-	
-	        while (localeParts.length) {
-	            data = localeData[localeParts.join('-')];
-	            if (data) {
-	                // Return the normalized locale string; e.g., we return "en-US",
-	                // instead of "en-us".
-	                return data.locale;
-	            }
-	
-	            localeParts.pop();
-	        }
-	    }
-	
-	    var defaultLocale = locales.pop();
-	    throw new Error(
-	        'No locale data has been added to IntlMessageFormat for: ' +
-	        locales.join(', ') + ', or the default locale: ' + defaultLocale
-	    );
-	};
-	
-	//# sourceMappingURL=core.js.map
-
-/***/ },
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// GENERATED FILE
 	"use strict";
-	exports["default"] = {"locale":"en","pluralRuleFunction":function (n,ord){var s=String(n).split("."),v0=!s[1],t0=Number(s[0])==n,n10=t0&&s[0].slice(-1),n100=t0&&s[0].slice(-2);if(ord)return n10==1&&n100!=11?"one":n10==2&&n100!=12?"two":n10==3&&n100!=13?"few":"other";return n==1&&v0?"one":"other"}};
+	exports["default"] = {"locale":"en","pluralRuleFunction":function (n,ord){var s=String(n).split("."),v0=!s[1],t0=Number(s[0])==n,n10=t0&&s[0].slice(-1),n100=t0&&s[0].slice(-2);if(ord)return n10==1&&n100!=11?"one":n10==2&&n100!=12?"two":n10==3&&n100!=13?"few":"other";return n==1&&v0?"one":"other"},"fields":{"year":{"displayName":"Year","relative":{"0":"this year","1":"next year","-1":"last year"},"relativeTime":{"future":{"one":"in {0} year","other":"in {0} years"},"past":{"one":"{0} year ago","other":"{0} years ago"}}},"month":{"displayName":"Month","relative":{"0":"this month","1":"next month","-1":"last month"},"relativeTime":{"future":{"one":"in {0} month","other":"in {0} months"},"past":{"one":"{0} month ago","other":"{0} months ago"}}},"day":{"displayName":"Day","relative":{"0":"today","1":"tomorrow","-1":"yesterday"},"relativeTime":{"future":{"one":"in {0} day","other":"in {0} days"},"past":{"one":"{0} day ago","other":"{0} days ago"}}},"hour":{"displayName":"Hour","relativeTime":{"future":{"one":"in {0} hour","other":"in {0} hours"},"past":{"one":"{0} hour ago","other":"{0} hours ago"}}},"minute":{"displayName":"Minute","relativeTime":{"future":{"one":"in {0} minute","other":"in {0} minutes"},"past":{"one":"{0} minute ago","other":"{0} minutes ago"}}},"second":{"displayName":"Second","relative":{"0":"now"},"relativeTime":{"future":{"one":"in {0} second","other":"in {0} seconds"},"past":{"one":"{0} second ago","other":"{0} seconds ago"}}}}};
 	
 	//# sourceMappingURL=en.js.map
 
@@ -14212,137 +14212,6 @@
 	/* jslint esnext: true */
 	
 	"use strict";
-	
-	var round = Math.round;
-	
-	function daysToYears(days) {
-	    // 400 years have 146097 days (taking into account leap year rules)
-	    return days * 400 / 146097;
-	}
-	
-	exports["default"] = function (from, to) {
-	    // Convert to ms timestamps.
-	    from = +from;
-	    to   = +to;
-	
-	    var millisecond = round(to - from),
-	        second      = round(millisecond / 1000),
-	        minute      = round(second / 60),
-	        hour        = round(minute / 60),
-	        day         = round(hour / 24),
-	        week        = round(day / 7);
-	
-	    var rawYears = daysToYears(day),
-	        month    = round(rawYears * 12),
-	        year     = round(rawYears);
-	
-	    return {
-	        millisecond: millisecond,
-	        second     : second,
-	        minute     : minute,
-	        hour       : hour,
-	        day        : day,
-	        week       : week,
-	        month      : month,
-	        year       : year
-	    };
-	};
-	
-	//# sourceMappingURL=diff.js.map
-
-/***/ },
-/* 174 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
-	Copyrights licensed under the New BSD License.
-	See the accompanying LICENSE file for terms.
-	*/
-	
-	/* jslint esnext: true */
-	
-	"use strict";
-	
-	// Purposely using the same implementation as the Intl.js `Intl` polyfill.
-	// Copyright 2013 Andy Earnshaw, MIT License
-	
-	var hop = Object.prototype.hasOwnProperty;
-	var toString = Object.prototype.toString;
-	
-	var realDefineProp = (function () {
-	    try { return !!Object.defineProperty({}, 'a', {}); }
-	    catch (e) { return false; }
-	})();
-	
-	var es3 = !realDefineProp && !Object.prototype.__defineGetter__;
-	
-	var defineProperty = realDefineProp ? Object.defineProperty :
-	        function (obj, name, desc) {
-	
-	    if ('get' in desc && obj.__defineGetter__) {
-	        obj.__defineGetter__(name, desc.get);
-	    } else if (!hop.call(obj, name) || 'value' in desc) {
-	        obj[name] = desc.value;
-	    }
-	};
-	
-	var objCreate = Object.create || function (proto, props) {
-	    var obj, k;
-	
-	    function F() {}
-	    F.prototype = proto;
-	    obj = new F();
-	
-	    for (k in props) {
-	        if (hop.call(props, k)) {
-	            defineProperty(obj, k, props[k]);
-	        }
-	    }
-	
-	    return obj;
-	};
-	
-	var arrIndexOf = Array.prototype.indexOf || function (search, fromIndex) {
-	    /*jshint validthis:true */
-	    var arr = this;
-	    if (!arr.length) {
-	        return -1;
-	    }
-	
-	    for (var i = fromIndex || 0, max = arr.length; i < max; i++) {
-	        if (arr[i] === search) {
-	            return i;
-	        }
-	    }
-	
-	    return -1;
-	};
-	
-	var isArray = Array.isArray || function (obj) {
-	    return toString.call(obj) === '[object Array]';
-	};
-	
-	var dateNow = Date.now || function () {
-	    return new Date().getTime();
-	};
-	exports.defineProperty = defineProperty, exports.objCreate = objCreate, exports.arrIndexOf = arrIndexOf, exports.isArray = isArray, exports.dateNow = dateNow;
-	
-	//# sourceMappingURL=es5.js.map
-
-/***/ },
-/* 175 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
-	Copyrights licensed under the New BSD License.
-	See the accompanying LICENSE file for terms.
-	*/
-	
-	/* jslint esnext: true */
-	
-	"use strict";
 	exports.extend = extend;
 	var hop = Object.prototype.hasOwnProperty;
 	
@@ -14368,7 +14237,7 @@
 	//# sourceMappingURL=utils.js.map
 
 /***/ },
-/* 176 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -14380,7 +14249,7 @@
 	/* jslint esnext: true */
 	
 	"use strict";
-	var src$utils$$ = __webpack_require__(175);
+	var src$utils$$ = __webpack_require__(173);
 	
 	// Purposely using the same implementation as the Intl.js `Intl` polyfill.
 	// Copyright 2013 Andy Earnshaw, MIT License
@@ -14422,7 +14291,7 @@
 	//# sourceMappingURL=es5.js.map
 
 /***/ },
-/* 177 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -14634,6 +14503,137 @@
 	};
 	
 	//# sourceMappingURL=compiler.js.map
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
+	Copyrights licensed under the New BSD License.
+	See the accompanying LICENSE file for terms.
+	*/
+	
+	/* jslint esnext: true */
+	
+	"use strict";
+	
+	var round = Math.round;
+	
+	function daysToYears(days) {
+	    // 400 years have 146097 days (taking into account leap year rules)
+	    return days * 400 / 146097;
+	}
+	
+	exports["default"] = function (from, to) {
+	    // Convert to ms timestamps.
+	    from = +from;
+	    to   = +to;
+	
+	    var millisecond = round(to - from),
+	        second      = round(millisecond / 1000),
+	        minute      = round(second / 60),
+	        hour        = round(minute / 60),
+	        day         = round(hour / 24),
+	        week        = round(day / 7);
+	
+	    var rawYears = daysToYears(day),
+	        month    = round(rawYears * 12),
+	        year     = round(rawYears);
+	
+	    return {
+	        millisecond: millisecond,
+	        second     : second,
+	        minute     : minute,
+	        hour       : hour,
+	        day        : day,
+	        week       : week,
+	        month      : month,
+	        year       : year
+	    };
+	};
+	
+	//# sourceMappingURL=diff.js.map
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
+	Copyrights licensed under the New BSD License.
+	See the accompanying LICENSE file for terms.
+	*/
+	
+	/* jslint esnext: true */
+	
+	"use strict";
+	
+	// Purposely using the same implementation as the Intl.js `Intl` polyfill.
+	// Copyright 2013 Andy Earnshaw, MIT License
+	
+	var hop = Object.prototype.hasOwnProperty;
+	var toString = Object.prototype.toString;
+	
+	var realDefineProp = (function () {
+	    try { return !!Object.defineProperty({}, 'a', {}); }
+	    catch (e) { return false; }
+	})();
+	
+	var es3 = !realDefineProp && !Object.prototype.__defineGetter__;
+	
+	var defineProperty = realDefineProp ? Object.defineProperty :
+	        function (obj, name, desc) {
+	
+	    if ('get' in desc && obj.__defineGetter__) {
+	        obj.__defineGetter__(name, desc.get);
+	    } else if (!hop.call(obj, name) || 'value' in desc) {
+	        obj[name] = desc.value;
+	    }
+	};
+	
+	var objCreate = Object.create || function (proto, props) {
+	    var obj, k;
+	
+	    function F() {}
+	    F.prototype = proto;
+	    obj = new F();
+	
+	    for (k in props) {
+	        if (hop.call(props, k)) {
+	            defineProperty(obj, k, props[k]);
+	        }
+	    }
+	
+	    return obj;
+	};
+	
+	var arrIndexOf = Array.prototype.indexOf || function (search, fromIndex) {
+	    /*jshint validthis:true */
+	    var arr = this;
+	    if (!arr.length) {
+	        return -1;
+	    }
+	
+	    for (var i = fromIndex || 0, max = arr.length; i < max; i++) {
+	        if (arr[i] === search) {
+	            return i;
+	        }
+	    }
+	
+	    return -1;
+	};
+	
+	var isArray = Array.isArray || function (obj) {
+	    return toString.call(obj) === '[object Array]';
+	};
+	
+	var dateNow = Date.now || function () {
+	    return new Date().getTime();
+	};
+	exports.defineProperty = defineProperty, exports.objCreate = objCreate, exports.arrIndexOf = arrIndexOf, exports.isArray = isArray, exports.dateNow = dateNow;
+	
+	//# sourceMappingURL=es5.js.map
 
 /***/ },
 /* 178 */
