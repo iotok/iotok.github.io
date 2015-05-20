@@ -2486,7 +2486,7 @@
 	
 	"use strict";
 	exports.__addLocaleData = __addLocaleData;
-	var intl$messageformat$$ = __webpack_require__(145), intl$relativeformat$$ = __webpack_require__(146), src$en$$ = __webpack_require__(114), src$mixin$$ = __webpack_require__(115), src$components$date$$ = __webpack_require__(116), src$components$time$$ = __webpack_require__(113), src$components$relative$$ = __webpack_require__(117), src$components$number$$ = __webpack_require__(118), src$components$message$$ = __webpack_require__(119), src$components$html$message$$ = __webpack_require__(120);
+	var intl$messageformat$$ = __webpack_require__(138), intl$relativeformat$$ = __webpack_require__(146), src$en$$ = __webpack_require__(114), src$mixin$$ = __webpack_require__(117), src$components$date$$ = __webpack_require__(115), src$components$time$$ = __webpack_require__(113), src$components$relative$$ = __webpack_require__(116), src$components$number$$ = __webpack_require__(118), src$components$message$$ = __webpack_require__(120), src$components$html$message$$ = __webpack_require__(119);
 	function __addLocaleData(data) {
 	    intl$messageformat$$["default"].__addLocaleData(data);
 	    intl$relativeformat$$["default"].__addLocaleData(data);
@@ -2546,7 +2546,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -2694,7 +2694,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -2900,7 +2900,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3045,7 +3045,7 @@
 	
 	var _utilsValidComponentChildren2 = _interopRequireDefault(_utilsValidComponentChildren);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3095,7 +3095,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3206,7 +3206,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3376,7 +3376,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3472,7 +3472,7 @@
 	
 	var _CollapsibleMixin2 = _interopRequireDefault(_CollapsibleMixin);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3614,7 +3614,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -3912,7 +3912,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4029,7 +4029,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4370,7 +4370,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4528,7 +4528,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4790,7 +4790,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -4851,7 +4851,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5072,7 +5072,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5109,7 +5109,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5165,7 +5165,7 @@
 	
 	var _BootstrapMixin2 = _interopRequireDefault(_BootstrapMixin);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5280,7 +5280,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5364,7 +5364,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5570,7 +5570,7 @@
 	
 	var _CollapsibleMixin2 = _interopRequireDefault(_CollapsibleMixin);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5717,7 +5717,7 @@
 	
 	var _BootstrapMixin2 = _interopRequireDefault(_BootstrapMixin);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -5889,7 +5889,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -6518,7 +6518,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -6559,7 +6559,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -6803,7 +6803,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -6913,7 +6913,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -6993,7 +6993,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7052,7 +7052,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7156,7 +7156,7 @@
 	
 	var _BootstrapMixin2 = _interopRequireDefault(_BootstrapMixin);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7303,7 +7303,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7354,7 +7354,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7507,7 +7507,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7842,7 +7842,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -7900,7 +7900,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8011,7 +8011,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8085,7 +8085,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8170,7 +8170,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -8398,7 +8398,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(13);
-	var classSet = __webpack_require__(151);
+	var classSet = __webpack_require__(150);
 	
 	var MenuItem = __webpack_require__(61);
 	var LinkMixin = __webpack_require__(133);
@@ -9871,17 +9871,17 @@
 	var HistoryLocation = __webpack_require__(99);
 	var RefreshLocation = __webpack_require__(100);
 	var StaticLocation = __webpack_require__(101);
-	var ScrollHistory = __webpack_require__(138);
+	var ScrollHistory = __webpack_require__(139);
 	var createRoutesFromReactChildren = __webpack_require__(109);
-	var isReactChildren = __webpack_require__(139);
-	var Transition = __webpack_require__(140);
+	var isReactChildren = __webpack_require__(140);
+	var Transition = __webpack_require__(141);
 	var PropTypes = __webpack_require__(134);
-	var Redirect = __webpack_require__(141);
+	var Redirect = __webpack_require__(142);
 	var History = __webpack_require__(105);
-	var Cancellation = __webpack_require__(142);
-	var Match = __webpack_require__(143);
+	var Cancellation = __webpack_require__(143);
+	var Match = __webpack_require__(144);
 	var Route = __webpack_require__(108);
-	var supportsHistory = __webpack_require__(144);
+	var supportsHistory = __webpack_require__(145);
 	var PathUtils = __webpack_require__(137);
 	
 	/**
@@ -10372,7 +10372,7 @@
 	}
 	
 	module.exports = createRouter;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
 
 /***/ },
 /* 111 */
@@ -10443,7 +10443,7 @@
 	
 	// TODO: Use `import React from "react";` when external modules are supported.
 	"use strict";
-	var src$react$$ = __webpack_require__(147), src$mixin$$ = __webpack_require__(115);
+	var src$react$$ = __webpack_require__(147), src$mixin$$ = __webpack_require__(117);
 	
 	var FormattedTime = src$react$$["default"].createClass({
 	    displayName: 'FormattedTime',
@@ -10495,7 +10495,94 @@
 	
 	// TODO: Use `import React from "react";` when external modules are supported.
 	"use strict";
-	var src$react$$ = __webpack_require__(147), intl$messageformat$$ = __webpack_require__(145), intl$relativeformat$$ = __webpack_require__(146), intl$format$cache$$ = __webpack_require__(157);
+	var src$react$$ = __webpack_require__(147), src$mixin$$ = __webpack_require__(117);
+	
+	var FormattedDate = src$react$$["default"].createClass({
+	    displayName: 'FormattedDate',
+	    mixins     : [src$mixin$$["default"]],
+	
+	    statics: {
+	        formatOptions: [
+	            'localeMatcher', 'timeZone', 'hour12', 'formatMatcher', 'weekday',
+	            'era', 'year', 'month', 'day', 'hour', 'minute', 'second',
+	            'timeZoneName'
+	        ]
+	    },
+	
+	    propTypes: {
+	        format: src$react$$["default"].PropTypes.string,
+	        value : src$react$$["default"].PropTypes.any.isRequired
+	    },
+	
+	    render: function () {
+	        var props    = this.props;
+	        var value    = props.value;
+	        var format   = props.format;
+	        var defaults = format && this.getNamedFormat('date', format);
+	        var options  = FormattedDate.filterFormatOptions(props, defaults);
+	
+	        return src$react$$["default"].DOM.span(null, this.formatDate(value, options));
+	    }
+	});
+	
+	exports["default"] = FormattedDate;
+	
+	//# sourceMappingURL=date.js.map
+
+/***/ },
+/* 116 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* jshint esnext:true */
+	
+	// TODO: Use `import React from "react";` when external modules are supported.
+	"use strict";
+	var src$react$$ = __webpack_require__(147), src$mixin$$ = __webpack_require__(117);
+	
+	var FormattedRelative = src$react$$["default"].createClass({
+	    displayName: 'FormattedRelative',
+	    mixins     : [src$mixin$$["default"]],
+	
+	    statics: {
+	        formatOptions: [
+	            'style', 'units'
+	        ]
+	    },
+	
+	    propTypes: {
+	        format: src$react$$["default"].PropTypes.string,
+	        value : src$react$$["default"].PropTypes.any.isRequired,
+	        now   : src$react$$["default"].PropTypes.any
+	    },
+	
+	    render: function () {
+	        var props    = this.props;
+	        var value    = props.value;
+	        var format   = props.format;
+	        var defaults = format && this.getNamedFormat('relative', format);
+	        var options  = FormattedRelative.filterFormatOptions(props, defaults);
+	
+	        var formattedRelativeTime = this.formatRelative(value, options, {
+	            now: props.now
+	        });
+	
+	        return src$react$$["default"].DOM.span(null, formattedRelativeTime);
+	    }
+	});
+	
+	exports["default"] = FormattedRelative;
+	
+	//# sourceMappingURL=relative.js.map
+
+/***/ },
+/* 117 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* jshint esnext:true */
+	
+	// TODO: Use `import React from "react";` when external modules are supported.
+	"use strict";
+	var src$react$$ = __webpack_require__(147), intl$messageformat$$ = __webpack_require__(138), intl$relativeformat$$ = __webpack_require__(146), intl$format$cache$$ = __webpack_require__(157);
 	
 	// -----------------------------------------------------------------------------
 	
@@ -10654,93 +10741,6 @@
 	//# sourceMappingURL=mixin.js.map
 
 /***/ },
-/* 116 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* jshint esnext:true */
-	
-	// TODO: Use `import React from "react";` when external modules are supported.
-	"use strict";
-	var src$react$$ = __webpack_require__(147), src$mixin$$ = __webpack_require__(115);
-	
-	var FormattedDate = src$react$$["default"].createClass({
-	    displayName: 'FormattedDate',
-	    mixins     : [src$mixin$$["default"]],
-	
-	    statics: {
-	        formatOptions: [
-	            'localeMatcher', 'timeZone', 'hour12', 'formatMatcher', 'weekday',
-	            'era', 'year', 'month', 'day', 'hour', 'minute', 'second',
-	            'timeZoneName'
-	        ]
-	    },
-	
-	    propTypes: {
-	        format: src$react$$["default"].PropTypes.string,
-	        value : src$react$$["default"].PropTypes.any.isRequired
-	    },
-	
-	    render: function () {
-	        var props    = this.props;
-	        var value    = props.value;
-	        var format   = props.format;
-	        var defaults = format && this.getNamedFormat('date', format);
-	        var options  = FormattedDate.filterFormatOptions(props, defaults);
-	
-	        return src$react$$["default"].DOM.span(null, this.formatDate(value, options));
-	    }
-	});
-	
-	exports["default"] = FormattedDate;
-	
-	//# sourceMappingURL=date.js.map
-
-/***/ },
-/* 117 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* jshint esnext:true */
-	
-	// TODO: Use `import React from "react";` when external modules are supported.
-	"use strict";
-	var src$react$$ = __webpack_require__(147), src$mixin$$ = __webpack_require__(115);
-	
-	var FormattedRelative = src$react$$["default"].createClass({
-	    displayName: 'FormattedRelative',
-	    mixins     : [src$mixin$$["default"]],
-	
-	    statics: {
-	        formatOptions: [
-	            'style', 'units'
-	        ]
-	    },
-	
-	    propTypes: {
-	        format: src$react$$["default"].PropTypes.string,
-	        value : src$react$$["default"].PropTypes.any.isRequired,
-	        now   : src$react$$["default"].PropTypes.any
-	    },
-	
-	    render: function () {
-	        var props    = this.props;
-	        var value    = props.value;
-	        var format   = props.format;
-	        var defaults = format && this.getNamedFormat('relative', format);
-	        var options  = FormattedRelative.filterFormatOptions(props, defaults);
-	
-	        var formattedRelativeTime = this.formatRelative(value, options, {
-	            now: props.now
-	        });
-	
-	        return src$react$$["default"].DOM.span(null, formattedRelativeTime);
-	    }
-	});
-	
-	exports["default"] = FormattedRelative;
-	
-	//# sourceMappingURL=relative.js.map
-
-/***/ },
 /* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -10748,7 +10748,7 @@
 	
 	// TODO: Use `import React from "react";` when external modules are supported.
 	"use strict";
-	var src$react$$ = __webpack_require__(147), src$mixin$$ = __webpack_require__(115);
+	var src$react$$ = __webpack_require__(147), src$mixin$$ = __webpack_require__(117);
 	
 	var FormattedNumber = src$react$$["default"].createClass({
 	    displayName: 'FormattedNumber',
@@ -10791,7 +10791,73 @@
 	
 	// TODO: Use `import React from "react";` when external modules are supported.
 	"use strict";
-	var src$react$$ = __webpack_require__(147), src$mixin$$ = __webpack_require__(115);
+	var src$react$$ = __webpack_require__(147), src$escape$$ = __webpack_require__(149), src$mixin$$ = __webpack_require__(117);
+	
+	var FormattedHTMLMessage = src$react$$["default"].createClass({
+	    displayName: 'FormattedHTMLMessage',
+	    mixins     : [src$mixin$$["default"]],
+	
+	    propTypes: {
+	        tagName: src$react$$["default"].PropTypes.string,
+	        message: src$react$$["default"].PropTypes.string.isRequired
+	    },
+	
+	    getDefaultProps: function () {
+	        return {tagName: 'span'};
+	    },
+	
+	    render: function () {
+	        var props   = this.props;
+	        var tagName = props.tagName;
+	        var message = props.message;
+	
+	        // Process all the props before they are used as values when formatting
+	        // the ICU Message string. Since the formatted message will be injected
+	        // via `innerHTML`, all String-based values need to be HTML-escaped. Any
+	        // React Elements that are passed as props will be rendered to a static
+	        // markup string that is presumed to be safe.
+	        var values = Object.keys(props).reduce(function (values, name) {
+	            var value = props[name];
+	
+	            if (typeof value === 'string') {
+	                value = src$escape$$["default"](value);
+	            } else if (src$react$$["default"].isValidElement(value)) {
+	                value = src$react$$["default"].renderToStaticMarkup(value);
+	            }
+	
+	            values[name] = value;
+	            return values;
+	        }, {});
+	
+	        // Since the message presumably has HTML in it, we need to set
+	        // `innerHTML` in order for it to be rendered and not escaped by React.
+	        // To be safe, all string prop values were escaped before formatting the
+	        // message. It is assumed that the message is not UGC, and came from
+	        // the developer making it more like a template.
+	        //
+	        // Note: There's a perf impact of using this component since there's no
+	        // way for React to do its virtual DOM diffing.
+	        return src$react$$["default"].DOM[tagName]({
+	            dangerouslySetInnerHTML: {
+	                __html: this.formatMessage(message, values)
+	            }
+	        });
+	    }
+	});
+	
+	exports["default"] = FormattedHTMLMessage;
+	
+	//# sourceMappingURL=html-message.js.map
+
+/***/ },
+/* 120 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* jshint esnext:true */
+	
+	// TODO: Use `import React from "react";` when external modules are supported.
+	"use strict";
+	var src$react$$ = __webpack_require__(147), src$mixin$$ = __webpack_require__(117);
 	
 	var FormattedMessage = src$react$$["default"].createClass({
 	    displayName: 'FormattedMessage',
@@ -10870,72 +10936,6 @@
 	exports["default"] = FormattedMessage;
 	
 	//# sourceMappingURL=message.js.map
-
-/***/ },
-/* 120 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* jshint esnext:true */
-	
-	// TODO: Use `import React from "react";` when external modules are supported.
-	"use strict";
-	var src$react$$ = __webpack_require__(147), src$escape$$ = __webpack_require__(148), src$mixin$$ = __webpack_require__(115);
-	
-	var FormattedHTMLMessage = src$react$$["default"].createClass({
-	    displayName: 'FormattedHTMLMessage',
-	    mixins     : [src$mixin$$["default"]],
-	
-	    propTypes: {
-	        tagName: src$react$$["default"].PropTypes.string,
-	        message: src$react$$["default"].PropTypes.string.isRequired
-	    },
-	
-	    getDefaultProps: function () {
-	        return {tagName: 'span'};
-	    },
-	
-	    render: function () {
-	        var props   = this.props;
-	        var tagName = props.tagName;
-	        var message = props.message;
-	
-	        // Process all the props before they are used as values when formatting
-	        // the ICU Message string. Since the formatted message will be injected
-	        // via `innerHTML`, all String-based values need to be HTML-escaped. Any
-	        // React Elements that are passed as props will be rendered to a static
-	        // markup string that is presumed to be safe.
-	        var values = Object.keys(props).reduce(function (values, name) {
-	            var value = props[name];
-	
-	            if (typeof value === 'string') {
-	                value = src$escape$$["default"](value);
-	            } else if (src$react$$["default"].isValidElement(value)) {
-	                value = src$react$$["default"].renderToStaticMarkup(value);
-	            }
-	
-	            values[name] = value;
-	            return values;
-	        }, {});
-	
-	        // Since the message presumably has HTML in it, we need to set
-	        // `innerHTML` in order for it to be rendered and not escaped by React.
-	        // To be safe, all string prop values were escaped before formatting the
-	        // message. It is assumed that the message is not UGC, and came from
-	        // the developer making it more like a template.
-	        //
-	        // Note: There's a perf impact of using this component since there's no
-	        // way for React to do its virtual DOM diffing.
-	        return src$react$$["default"].DOM[tagName]({
-	            dangerouslySetInnerHTML: {
-	                __html: this.formatMessage(message, values)
-	            }
-	        });
-	    }
-	});
-	
-	exports["default"] = FormattedHTMLMessage;
-	
-	//# sourceMappingURL=html-message.js.map
 
 /***/ },
 /* 121 */
@@ -11352,7 +11352,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -11436,7 +11436,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(150);
+	var _classnames = __webpack_require__(148);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -11711,7 +11711,7 @@
 	}
 	
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
 
 /***/ },
 /* 128 */
@@ -12076,7 +12076,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(13);
-	var classSet = __webpack_require__(151);
+	var classSet = __webpack_require__(150);
 	
 	function isLeftClickEvent(event) {
 	  return event.button === 0;
@@ -12431,11 +12431,32 @@
 /* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* jshint node:true */
+	
+	'use strict';
+	
+	var IntlMessageFormat = __webpack_require__(159)['default'];
+	
+	// Add all locale data to `IntlMessageFormat`. This module will be ignored when
+	// bundling for the browser with Browserify/Webpack.
+	__webpack_require__(158);
+	
+	// Re-export `IntlMessageFormat` as the CommonJS default exports with all the
+	// locale data registered, and with English set as the default locale. Define
+	// the `default` prop for use with other compiled ES6 Modules.
+	exports = module.exports = IntlMessageFormat;
+	exports['default'] = exports;
+
+
+/***/ },
+/* 139 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
 	var invariant = __webpack_require__(154);
 	var canUseDOM = __webpack_require__(155).canUseDOM;
-	var getWindowScrollPosition = __webpack_require__(158);
+	var getWindowScrollPosition = __webpack_require__(160);
 	
 	function shouldUpdateScroll(state, prevState) {
 	  if (!prevState) {
@@ -12508,7 +12529,7 @@
 	module.exports = ScrollHistory;
 
 /***/ },
-/* 139 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12526,15 +12547,15 @@
 	module.exports = isReactChildren;
 
 /***/ },
-/* 140 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* jshint -W058 */
 	
 	'use strict';
 	
-	var Cancellation = __webpack_require__(142);
-	var Redirect = __webpack_require__(141);
+	var Cancellation = __webpack_require__(143);
+	var Redirect = __webpack_require__(142);
 	
 	/**
 	 * Encapsulates a transition to a given path.
@@ -12606,7 +12627,7 @@
 	module.exports = Transition;
 
 /***/ },
-/* 141 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12623,7 +12644,7 @@
 	module.exports = Redirect;
 
 /***/ },
-/* 142 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12637,7 +12658,7 @@
 	module.exports = Cancellation;
 
 /***/ },
-/* 143 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12717,7 +12738,7 @@
 	module.exports = Match;
 
 /***/ },
-/* 144 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12736,27 +12757,6 @@
 	}
 	
 	module.exports = supportsHistory;
-
-/***/ },
-/* 145 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* jshint node:true */
-	
-	'use strict';
-	
-	var IntlMessageFormat = __webpack_require__(160)['default'];
-	
-	// Add all locale data to `IntlMessageFormat`. This module will be ignored when
-	// bundling for the browser with Browserify/Webpack.
-	__webpack_require__(159);
-	
-	// Re-export `IntlMessageFormat` as the CommonJS default exports with all the
-	// locale data registered, and with English set as the default locale. Define
-	// the `default` prop for use with other compiled ES6 Modules.
-	exports = module.exports = IntlMessageFormat;
-	exports['default'] = exports;
-
 
 /***/ },
 /* 146 */
@@ -12798,6 +12798,59 @@
 /* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2015 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	
+	function classNames () {
+		'use strict';
+	
+		var classes = '';
+	
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+	
+			var argType = typeof arg;
+	
+			if ('string' === argType || 'number' === argType) {
+				classes += ' ' + arg;
+	
+			} else if (Array.isArray(arg)) {
+				classes += ' ' + classNames.apply(null, arg);
+	
+			} else if ('object' === argType) {
+				for (var key in arg) {
+					if (arg.hasOwnProperty(key) && arg[key]) {
+						classes += ' ' + key;
+					}
+				}
+			}
+		}
+	
+		return classes.substr(1);
+	}
+	
+	// safely export classNames for node / browserify
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	}
+	
+	/* global define */
+	// safely export classNames for RequireJS
+	if (true) {
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+			return classNames;
+		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}
+
+
+/***/ },
+/* 149 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* jshint esnext:true */
 	
 	/*
@@ -12830,7 +12883,60 @@
 	//# sourceMappingURL=escape.js.map
 
 /***/ },
-/* 149 */
+/* 150 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2015 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	
+	function classNames () {
+		'use strict';
+	
+		var classes = '';
+	
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+	
+			var argType = typeof arg;
+	
+			if ('string' === argType || 'number' === argType) {
+				classes += ' ' + arg;
+	
+			} else if (Array.isArray(arg)) {
+				classes += ' ' + classNames.apply(null, arg);
+	
+			} else if ('object' === argType) {
+				for (var key in arg) {
+					if (arg.hasOwnProperty(key) && arg[key]) {
+						classes += ' ' + key;
+					}
+				}
+			}
+		}
+	
+		return classes.substr(1);
+	}
+	
+	// safely export classNames for node / browserify
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	}
+	
+	/* global define */
+	// safely export classNames for RequireJS
+	if (true) {
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+			return classNames;
+		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}
+
+
+/***/ },
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// shim for using process in browser
@@ -12923,112 +13029,6 @@
 	    throw new Error('process.chdir is not supported');
 	};
 	process.umask = function() { return 0; };
-
-
-/***/ },
-/* 150 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2015 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	
-	function classNames () {
-		'use strict';
-	
-		var classes = '';
-	
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-	
-			var argType = typeof arg;
-	
-			if ('string' === argType || 'number' === argType) {
-				classes += ' ' + arg;
-	
-			} else if (Array.isArray(arg)) {
-				classes += ' ' + classNames.apply(null, arg);
-	
-			} else if ('object' === argType) {
-				for (var key in arg) {
-					if (arg.hasOwnProperty(key) && arg[key]) {
-						classes += ' ' + key;
-					}
-				}
-			}
-		}
-	
-		return classes.substr(1);
-	}
-	
-	// safely export classNames for node / browserify
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = classNames;
-	}
-	
-	/* global define */
-	// safely export classNames for RequireJS
-	if (true) {
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
-			return classNames;
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}
-
-
-/***/ },
-/* 151 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2015 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	
-	function classNames () {
-		'use strict';
-	
-		var classes = '';
-	
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-	
-			var argType = typeof arg;
-	
-			if ('string' === argType || 'number' === argType) {
-				classes += ' ' + arg;
-	
-			} else if (Array.isArray(arg)) {
-				classes += ' ' + classNames.apply(null, arg);
-	
-			} else if ('object' === argType) {
-				for (var key in arg) {
-					if (arg.hasOwnProperty(key) && arg[key]) {
-						classes += ' ' + key;
-					}
-				}
-			}
-		}
-	
-		return classes.substr(1);
-	}
-	
-	// safely export classNames for node / browserify
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = classNames;
-	}
-	
-	/* global define */
-	// safely export classNames for RequireJS
-	if (true) {
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
-			return classNames;
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}
 
 
 /***/ },
@@ -13187,7 +13187,7 @@
 	
 	module.exports = invariant;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
 
 /***/ },
 /* 155 */
@@ -13301,7 +13301,7 @@
 	
 	module.exports = warning;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
 
 /***/ },
 /* 157 */
@@ -13315,6 +13315,28 @@
 
 /***/ },
 /* 158 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* (ignored) */
+
+/***/ },
+/* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* jslint esnext: true */
+	
+	"use strict";
+	var src$core$$ = __webpack_require__(167), src$en$$ = __webpack_require__(168);
+	
+	src$core$$["default"].__addLocaleData(src$en$$["default"]);
+	src$core$$["default"].defaultLocale = 'en';
+	
+	exports["default"] = src$core$$["default"];
+	
+	//# sourceMappingURL=main.js.map
+
+/***/ },
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13335,28 +13357,6 @@
 	}
 	
 	module.exports = getWindowScrollPosition;
-
-/***/ },
-/* 159 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* (ignored) */
-
-/***/ },
-/* 160 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* jslint esnext: true */
-	
-	"use strict";
-	var src$core$$ = __webpack_require__(167), src$en$$ = __webpack_require__(168);
-	
-	src$core$$["default"].__addLocaleData(src$en$$["default"]);
-	src$core$$["default"].defaultLocale = 'en';
-	
-	exports["default"] = src$core$$["default"];
-	
-	//# sourceMappingURL=main.js.map
 
 /***/ },
 /* 161 */
@@ -13551,7 +13551,7 @@
 	/* jslint esnext: true */
 	
 	"use strict";
-	var src$utils$$ = __webpack_require__(173), src$es5$$ = __webpack_require__(174), src$compiler$$ = __webpack_require__(175), intl$messageformat$parser$$ = __webpack_require__(180);
+	var src$utils$$ = __webpack_require__(173), src$es5$$ = __webpack_require__(174), src$compiler$$ = __webpack_require__(175), intl$messageformat$parser$$ = __webpack_require__(178);
 	exports["default"] = MessageFormat;
 	
 	// -- MessageFormat --------------------------------------------------------
@@ -13830,7 +13830,7 @@
 	/* jslint esnext: true */
 	
 	"use strict";
-	var intl$messageformat$$ = __webpack_require__(145), src$diff$$ = __webpack_require__(176), src$es5$$ = __webpack_require__(177);
+	var intl$messageformat$$ = __webpack_require__(138), src$diff$$ = __webpack_require__(176), src$es5$$ = __webpack_require__(177);
 	exports["default"] = RelativeFormat;
 	
 	// -----------------------------------------------------------------------------
@@ -14135,8 +14135,8 @@
 
 	// Load modules
 	
-	var Stringify = __webpack_require__(178);
-	var Parse = __webpack_require__(179);
+	var Stringify = __webpack_require__(179);
+	var Parse = __webpack_require__(180);
 	
 	
 	// Declare internals
@@ -14637,6 +14637,16 @@
 /* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+	
+	exports = module.exports = __webpack_require__(182)['default'];
+	exports['default'] = exports;
+
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// Load modules
 	
 	var Utils = __webpack_require__(181);
@@ -14737,7 +14747,7 @@
 
 
 /***/ },
-/* 179 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Load modules
@@ -14901,16 +14911,6 @@
 	
 	    return Utils.compact(obj);
 	};
-
-
-/***/ },
-/* 180 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	exports = module.exports = __webpack_require__(182)['default'];
-	exports['default'] = exports;
 
 
 /***/ },
