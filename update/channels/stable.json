@@ -1,0 +1,17 @@
+{
+  "name": "stable",
+  "packages": {
+    "launcher": {
+      "id": "launcher",
+      "name": "SeeEyes Launcher",
+      "latest": "0.3.3",
+      "releases": "releases/launcher.json"
+    },
+    "monitor": {
+      "id": "monitor",
+      "name": "SeeEyes Monitor",
+      "latest": "0.3.1",
+      "releases": "releases/monitor.json"
+    }
+  }
+}
